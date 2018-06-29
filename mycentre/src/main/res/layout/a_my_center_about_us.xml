@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="content"
+            type="java.lang.String"/>
+
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  style="@style/style_width_height_match_parent"
+                  android:layout_margin="10dp"
+                  android:orientation="vertical"
+                  android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="公司概况"
+            android:textColor="#000"
+            android:textSize="@dimen/sp_18"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="        北京招通致晟科技有限公司（以下简称“招通致晟”）为中国招商局集团所属招商局科技集团投资，注册于北京中关村科技园园区的高新技术企业。招通致晟专注于空中交通管理、机场以及数字化场站的指挥调度系统、无线宽带专网移动终端与业务系统、关键业务物联网技术与应用领域的技术与产品研发，积累了大量发明专利、软件著作权、注册商标等自主知识产权、核心技术与产品。"
+            android:textColor="#000"
+            android:textSize="@dimen/sp_16"/>
+
+    </LinearLayout>
+</layout>

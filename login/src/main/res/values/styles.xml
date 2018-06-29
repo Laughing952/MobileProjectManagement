@@ -1,0 +1,55 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <!--TextInputEditText空间的样式-->
+    <style name="TextInputEditTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textColorHint">@android:color/black</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <!--TextInputLayout空间的样式-->
+    <style name="TextInputLayoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">50dp</item>
+        <item name="android:layout_marginRight">50dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:layout_marginTop">50dp</item>
+    </style>
+    <!--底部按钮的样式，例如：登录、注册、提交-->
+    <style name="BottomBottonStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">55dp</item>
+        <item name="android:layout_marginLeft">50dp</item>
+        <item name="android:layout_marginRight">50dp</item>
+        <item name="android:background">@drawable/bg_bottom_button</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <!--获取验证码按钮的样式-->
+    <style name="TextView_GetCode_Style">
+        <item name="android:layout_marginLeft">12dp</item>
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">@drawable/bg_bottom_button</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ErrorText">
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+</resources>

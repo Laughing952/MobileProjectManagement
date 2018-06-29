@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="main_color">#009CFF</color>
+    <color name="black">#515151</color>
+    <color name="lucency_black">#40515151</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <!-- 个人中心-->
+    <color name="color_main_bg_white">#ffffff</color>
+    <!--主文字黑色-->
+    <color name="color_main_text_light_black">#666666</color>
+    <color name="red">#fd5f5d</color>
+    <!--橘色（Parking的颜色及按钮等的颜色）-->
+    <color name="color_about_us_tv_parking">#EF8627</color>
+    <color name="white">#ffffff</color>
+    <!--文字淡黑色-->
+    <color name="color_main_text_light_gray">#999999</color>
+    <color name="lightGray">#cccccc</color>
+    <!--个人中心-圆心头像使用颜色-->
+    <color name="colorPhoto">#4F5457</color>
+    <!--搜索框背景色-->
+    <color name="little_white">#f8f8f8</color>
+    <!--搜索框分割线-->
+    <color name="color_divide_line_black_ad">#e1e1e1</color>
+    <!--未读消息小图标背景色-->
+    <color name="msg_red">#F4212F</color>
+
+    <color name="green">#A2CD5A</color>
+</resources>

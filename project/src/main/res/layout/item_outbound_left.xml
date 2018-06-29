@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="action"
+            type="com.project.bean.ActionBean"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:text="类型1"
+            android:textColor="@color/color_main_text_light_black"
+            android:textSize="@dimen/sp_14"/>
+        <View
+            android:layout_alignParentBottom="true"
+            style="@style/style_flow_people_1_dp_height_split_line"/>
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="loginInfo"
+            type="com.login.bean.UserInfo" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_phone"
+            style="@style/TextInputLayoutStyle"
+            android:layout_marginTop="50dp"
+            app:counterMaxLength="11"
+            app:errorTextAppearance="@style/ErrorText"
+            app:errorEnabled="false">
+            <!--这里可以直接使用EditText-->
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/et_phone"
+                style="@style/TextInputEditTextStyle"
+                android:hint="电话号码"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:text="@={loginInfo.phoneNum}" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_password1"
+            style="@style/TextInputLayoutStyle"
+            android:layout_marginTop="20dp"
+            app:counterMaxLength="20"
+            app:errorEnabled="false"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/main_color"
+            app:errorTextAppearance="@style/ErrorText"
+            app:passwordToggleTintMode="multiply">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/et_password1"
+                style="@style/TextInputEditTextStyle"
+                android:hint="密码"
+                android:inputType="textPassword"
+                android:maxLength="20"
+                android:text="@={loginInfo.password}" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_password2"
+            style="@style/TextInputLayoutStyle"
+            android:layout_marginTop="20dp"
+            app:counterMaxLength="20"
+            app:errorEnabled="false"
+            app:passwordToggleEnabled="true"
+            app:errorTextAppearance="@style/ErrorText"
+            app:passwordToggleTint="@color/main_color"
+            app:passwordToggleTintMode="multiply">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/et_password2"
+                style="@style/TextInputEditTextStyle"
+                android:hint="确认密码"
+                android:maxLength="20"
+                android:inputType="textPassword"
+                android:text="@={loginInfo.confirmPassword}" />
+        </android.support.design.widget.TextInputLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="20dp">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/tv_getCode"
+                app:counterMaxLength="6"
+                app:errorEnabled="false">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/et_code"
+                    style="@style/TextInputEditTextStyle"
+                    android:hint="验证码"
+                    android:maxLength="6"
+                    android:inputType="number"
+                    android:text="@={loginInfo.code}" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_getCode"
+                android:layout_alignBaseline="@+id/til_code"
+                android:layout_alignParentRight="true"
+                android:onClick="@{click}"
+                android:text="获取验证码"
+                style="@style/TextView_GetCode_Style" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_register"
+            style="@style/BottomBottonStyle"
+            android:layout_marginTop="30dp"
+            android:onClick="@{click}"
+            android:text="注册" />
+
+    </LinearLayout>
+</layout>

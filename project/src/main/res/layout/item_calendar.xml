@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="calendarVM"
+            type="com.project.ui.viewmodel.CalendarVM" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@{calendarVM.day}"
+            android:textSize="8sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_day"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/ic_arrow_right"
+            android:visibility="@{calendarVM.isShowAdd?View.VISIBLE:View.INVISIBLE}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_day"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:text="@{calendarVM.statistics}"
+            android:textColor="@color/main_color"
+            android:textSize="10sp"
+            android:visibility="@{calendarVM.isShowNum?View.VISIBLE:View.INVISIBLE}" />
+
+    </RelativeLayout>
+</layout>

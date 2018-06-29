@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.unistrong.working.ui.viewmodel.GeneralRequest_ICommitDetailsVM"/>
+
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+        >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <!--申请人-->
+                <RelativeLayout
+                    android:id="@+id/rl_general_request_i_commit_project"
+                    style="@style/style_common_line_style"
+                    android:onClick="@{click}"
+                    >
+
+                    <TextView
+                        style="@style/style_width_height_wrap_content_right_arrow"
+                        android:text="申请人:"
+                        />
+
+                    <TextView
+                        android:id="@+id/et_general_request_i_commit_project"
+                        style="@style/style_edit_text_user_info"
+                        android:maxLength="20"
+                        android:text="@={viewmodel.name}"
+                        />
+
+                </RelativeLayout>
+
+                <View
+                    style="@style/style_flow_people_1_dp_height_split_line"/>
+                <!--审批人-->
+                <RelativeLayout
+                    android:id="@+id/rl_general_request_i_commit_approve_person"
+                    style="@style/style_common_line_style"
+                    android:onClick="@{click}"
+                    >
+
+                    <TextView
+                        style="@style/style_width_height_wrap_content_right_arrow"
+                        android:text="审批人:"
+                        />
+
+                    <TextView
+                        android:id="@+id/et_general_request_i_commit_approve_person"
+                        style="@style/style_edit_text_user_info"
+                        android:maxLength="20"
+                        android:text="@={viewmodel.approval}"
+
+                        />
+
+                </RelativeLayout>
+
+                <View
+                    style="@style/style_flow_people_1_dp_height_split_line"/>
+
+                <!--标题-->
+                <RelativeLayout
+                    android:id="@+id/rl_general_request_i_commit_title"
+                    style="@style/style_common_line_style"
+                    android:onClick="@{click}"
+                    >
+
+                    <TextView
+                        style="@style/style_width_height_wrap_content_right_arrow"
+                        android:text="标题:"
+                        />
+
+                    <TextView
+                        android:id="@+id/et_general_request_i_commit_title"
+                        style="@style/style_edit_text_user_info"
+                        android:maxLength="20"
+                        android:text="@={viewmodel.title}"
+                        />
+
+                </RelativeLayout>
+
+                <View
+                    style="@style/style_flow_people_1_dp_height_split_line"/>
+
+
+                <!--内容-->
+                <RelativeLayout
+                    android:id="@+id/rl_general_request_i_commit_content"
+                    style="@style/style_common_line_style"
+                    android:onClick="@{click}"
+                    >
+
+                    <TextView
+                        style="@style/style_width_height_wrap_content_right_arrow"
+                        android:text="内容:"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_general_request_i_commit_content"
+                        style="@style/style_edit_text_user_info"
+                        android:ellipsize="end"
+                        android:text="@={viewmodel.content}"
+                        />
+
+                </RelativeLayout>
+
+                <View
+                    style="@style/style_flow_people_1_dp_height_split_line"/>
+                <!--图片-->
+                <LinearLayout
+                    android:id="@+id/rl_general_request_i_commit_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="@{click}"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    >
+
+                    <TextView
+                        style="@style/style_width_height_wrap_content_right_arrow"
+                        android:layout_marginRight="5dp"
+                        android:text="图片: "/>
+
+                    <GridView
+                        android:id="@+id/gv_general_request_record"
+                        style="@style/style_add_photo_grid_view_2_line"/>
+
+                </LinearLayout>
+
+                <View
+                    style="@style/style_flow_people_1_dp_height_split_line"/>
+                <!--抄送人-->
+                <RelativeLayout
+                    android:id="@+id/rl_general_request_i_commit_cc_person"
+                    style="@style/style_common_line_style"
+                    android:onClick="@{click}"
+                    >
+
+                    <TextView
+                        style="@style/style_width_height_wrap_content_right_arrow"
+                        android:text="抄送人:"
+                        />
+
+                    <TextView
+                        android:id="@+id/et_general_request_i_commit_cc_person"
+                        style="@style/style_edit_text_user_info"
+                        android:maxLength="20"
+                        android:text="@={viewmodel.cc}"
+
+                        />
+
+                </RelativeLayout>
+
+                <View
+                    style="@style/style_flow_people_1_dp_height_split_line"/>
+                <!--意见-->
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                              style="@style/style_width_height_match_parent"
+                              android:background="@color/color_main_bg_white"
+                              android:orientation="vertical"
+                              android:padding="10dp"
+                              android:visibility="gone">
+
+                    <TextView
+                        style="@style/style_width_height_wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="10dp"
+                        android:text="意见"
+                        android:textColor="@color/color_main_text_light_black"
+                        android:textSize="@dimen/sp_16"/>
+
+                    <EditText
+                        android:id="@+id/et_general_request_i_commit_opinion"
+                        style="@style/style_all_other"
+                        android:text=""/>
+
+                </LinearLayout>
+
+                <View
+                    style="@style/style_flow_people_1_dp_height_split_line"/>
+
+                <View
+                    style="@style/style_flow_people_40_dp_height_split_line"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="50dp"
+            android:background="@color/base_title_bg"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@drawable/selector_text_click_bg_base_title"
+            android:textSize="@dimen/sp_16"/>
+    </RelativeLayout>
+</layout>

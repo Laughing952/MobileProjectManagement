@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.unistrong.working.response.AttendanceSettingRep"/>
+
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  style="@style/style_width_height_match_parent"
+                  android:layout_height="wrap_content"
+                  android:background="@color/color_main_bg_white"
+                  android:orientation="vertical">
+        <!--考勤名称-->
+        <LinearLayout
+            android:id="@+id/rl_attendance_setting_name"
+            style="@style/style_common_line_style"
+            android:layout_width="match_parent">
+
+            <TextView
+                style="@style/style_width_height_wrap_content"
+                android:layout_width="0dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@={viewmodel.signinPointName}"
+                android:textColor="#000"
+                android:textSize="@dimen/sp_14"/>
+
+
+            <!--android:layout_toLeftOf="@+id/iv_attendance_setting_arrow"-->
+            <TextView
+                android:id="@+id/tv_attendance_setting_sex"
+                style="@style/style_edit_text_user_info2"
+                android:layout_width="0dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="2"
+                android:drawableRight="@mipmap/ic_arrow_right"
+                android:ellipsize="end"
+                android:paddingRight="0dp"
+                android:text="@={viewmodel.weekDay}"/>
+
+        </LinearLayout>
+
+        <View
+            style="@style/style_flow_people_1_ps_line_grey"></View>
+    </LinearLayout>
+</layout>

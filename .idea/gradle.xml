@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/RecyclerViewLibrary" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/baidumaplibrary" />
+            <option value="$PROJECT_DIR$/global" />
+            <option value="$PROJECT_DIR$/login" />
+            <option value="$PROJECT_DIR$/mycentre" />
+            <option value="$PROJECT_DIR$/project" />
+            <option value="$PROJECT_DIR$/qrcode" />
+            <option value="$PROJECT_DIR$/waterbase" />
+            <option value="$PROJECT_DIR$/working" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

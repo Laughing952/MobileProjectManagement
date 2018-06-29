@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="java.lang.String"/>
+
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:overScrollMode="never"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="        打开app ---> 点击底部导航栏中的“项目” ---> 进入项目页面，点击右上角 “+”号 ---> 填写信息 --->会提示创建成功"
+                android:textColor="#666"
+                android:textSize="@dimen/sp_16"/>
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="        注意：项目员的选择，进入项目成员页面，没有成员，需要点击右上角“+”号 ---> 进入选择项目成员页面。点击名字最右边的方框，进行选择。选择完成后点击“确定” ---> 退回到项目成员页面，再点击确定即可选择成功，成功后，创建项目页面会有人员个数显示。"
+                android:textColor="#666"
+                android:textSize="@dimen/sp_16"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>

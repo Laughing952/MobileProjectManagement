@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.unistrong.working.ui.viewmodel.IParticipatedDetailsVM"/>
+
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/tv_item_sent_to_me_details_date"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@={viewmodel.date}"
+            android:textColor="@color/color_date"
+            android:textSize="@dimen/sp_14"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_weight="2">
+
+            <ImageView
+                android:id="@+id/iv_item_sent_to_me_details_user_head"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/mini_avatar_shadow"
+                android:focusable="false"/>
+
+            <!--android:text="不经一番寒傲骨，哪得梅花扑鼻香。不入炉火任其燎，怎知是否是真金！"-->
+
+            <TextView
+                android:id="@+id/tv_item_sent_to_me_details_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/iv_item_sent_to_me_details_user_head"
+                android:background="@drawable/chat_to_bg"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="left|center"
+                android:lineSpacingExtra="2dp"
+                android:minHeight="50dp"
+                android:text="@={viewmodel.content}"
+                android:textColor="#ff000000"
+                android:textSize="@dimen/sp_14"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</layout>

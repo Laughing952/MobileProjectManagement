@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--项目-->
+            <RelativeLayout
+                android:id="@+id/rl_create_general_request_project"
+                style="@style/style_common_line_style"
+                android:onClick="@{click}"
+                >
+
+                <TextView
+                    style="@style/style_width_height_wrap_content_right_arrow"
+                    android:text="项目:"
+                    />
+
+                <TextView
+                    android:id="@+id/et_create_general_request_project"
+                    style="@style/style_edit_text_user_info"
+                    android:layout_toLeftOf="@+id/iv_create_general_request_project"
+                    android:hint="必选"
+                    android:maxLength="20"
+                    />
+
+                <ImageView
+                    android:id="@id/iv_create_general_request_project"
+                    style="@style/style_width_height_wrap_content_arrow2"
+                    />
+
+            </RelativeLayout>
+
+            <View
+                style="@style/style_flow_people_1_dp_height_split_line"/>
+            <!--标题-->
+            <RelativeLayout
+                android:id="@+id/rl_create_general_request_title"
+                style="@style/style_common_line_style"
+                >
+
+                <TextView
+                    style="@style/style_width_height_wrap_content_right_arrow"
+                    android:text="标题:"
+                    />
+
+                <EditText
+                    android:id="@+id/et_create_general_request_title"
+                    style="@style/style_edit_text_user_info"
+                    android:layout_toLeftOf="@+id/iv_create_general_request_title"
+                    android:hint="必填"
+                    android:maxLength="20"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_create_general_request_title"
+                    style="@style/style_width_height_wrap_content_arrow"
+                    />
+            </RelativeLayout>
+
+            <View
+                style="@style/style_flow_people_1_dp_height_split_line"/>
+
+            <!--审批人-->
+            <RelativeLayout
+                android:id="@+id/rl_create_general_request_approve_person"
+                style="@style/style_common_line_style"
+                android:onClick="@{click}">
+
+                <TextView
+                    style="@style/style_width_height_wrap_content_right_arrow"
+                    android:text="审批人:"
+                    />
+
+                <TextView
+                    android:id="@+id/et_create_general_request_approve_person"
+                    style="@style/style_edit_text_user_info"
+                    android:layout_toLeftOf="@+id/iv_create_general_request_approve_person"
+                    android:hint="必选"
+                    android:maxLength="20"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_create_general_request_approve_person"
+                    style="@style/style_width_height_wrap_content_arrow2"
+                    />
+            </RelativeLayout>
+
+            <View
+                style="@style/style_flow_people_1_dp_height_split_line"/>
+
+            <!--抄送人-->
+            <RelativeLayout
+                android:id="@+id/rl_create_general_request_cc_person"
+                style="@style/style_common_line_style"
+                android:onClick="@{click}"
+                >
+
+                <TextView
+                    style="@style/style_width_height_wrap_content_right_arrow"
+                    android:text="抄送人:"/>
+
+                <TextView
+                    android:id="@+id/et_create_general_request_cc_person"
+                    style="@style/style_edit_text_user_info"
+                    android:layout_toLeftOf="@+id/iv_create_general_request_cc_person"
+                    android:maxLength="20"
+                   />
+
+                <ImageView
+                    android:id="@+id/iv_create_general_request_cc_person"
+                    style="@style/style_width_height_wrap_content_arrow2"
+                    />
+            </RelativeLayout>
+
+            <View
+                style="@style/style_flow_people_1_dp_height_split_line"/>
+            <!--照片-->
+            <LinearLayout
+                android:id="@+id/rl_create_general_request_photo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="@{click}"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/style_width_height_wrap_content_right_arrow"
+                    android:layout_marginRight="5dp"
+                    android:text="照片: (添加4张图片-向上滑动可再添加4张)"
+                    />
+
+                <GridView
+                    android:id="@+id/gv_create_general_request"
+                    android:verticalSpacing="@dimen/dp_4"
+                    style="@style/style_add_photo_grid_view_2_line"/>
+
+            </LinearLayout>
+
+            <View
+                style="@style/style_flow_people_1_dp_height_split_line"/>
+            <!--备注-->
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                          style="@style/style_width_height_match_parent"
+                          android:background="@color/color_main_bg_white"
+                          android:orientation="vertical"
+                          android:padding="10dp">
+
+                <TextView
+                    style="@style/style_width_height_wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="10dp"
+                    android:text="备注"
+                    android:textColor="@color/color_main_text_light_black"
+                    android:textSize="@dimen/sp_16"/>
+
+                <EditText
+                    android:id="@+id/et_create_general_request_other"
+                    style="@style/style_all_other"
+                    android:hint="请输入您的备注信息"
+                    />
+
+            </LinearLayout>
+
+            <View
+                style="@style/style_flow_people_1_dp_height_split_line"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</layout>

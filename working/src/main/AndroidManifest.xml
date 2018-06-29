@@ -1,0 +1,35 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.unistrong.working">
+
+    <application>
+        <activity android:name=".ui.activity.A_General_Approval"/>
+        <activity android:name=".ui.activity.A_Create_General_Request"/>
+        <activity android:name=".ui.activity.A_General_Request_Details"/>
+        <activity android:name=".ui.activity.A_General_Request_I_Commit_Details"/>
+        <activity android:name=".ui.activity.A_General_Request_Cc_me_Details_Details"/>
+        <activity android:name=".ui.activity.A_Working_Task"/>
+        <activity android:name=".ui.activity.A_Create_New_Task"/>
+        <activity android:name=".ui.activity.A_Sent_To_Me_Details"/>
+        <activity android:name=".ui.activity.A_I_Arranged_DetailsDetails"/>
+        <activity android:name=".ui.activity.A_I_Participated_DetailsDetails"/>
+        <activity android:name=".ui.activity.A_Seek_Bar_Task_Progress"/>
+        <activity android:name=".ui.activity.AGeneralRequestIApprovedDetails_Content"/>
+        <activity android:name=".ui.activity.A_Join_People"/>
+        <activity android:name=".ui.activity.A_Create_New_Task_Describe"/>
+        <activity android:name=".ui.activity.A_Punch_Record"/>
+        <activity android:name=".ui.activity.A_Message"/>
+
+
+
+
+
+
+
+
+        <activity android:name=".ui.activity.A_Add_Custom_Attendance"/>
+        <activity android:name=".ui.activity.A_Attendance_Setting"/>
+        <activity android:name=".ui.activity.A_Add_Project_Attendance"/>
+        <activity android:name=".ui.activity.A_Attendance_Edit"/>
+
+    </application>
+</manifest>

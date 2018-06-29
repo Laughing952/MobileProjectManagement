@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.mycentre.ui.viewmodel.PersonInfoVM"/>
+
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!--头像-->
+        <RelativeLayout
+            android:id="@+id/rl_personal_center_phone"
+            style="@style/style_common_line_style"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/color_main_bg_white"
+            android:onClick="@{click}">
+
+            <TextView
+                style="@style/style_width_height_wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:text="头像"
+                android:textColor="@color/color_main_text_light_black"
+                android:textSize="@dimen/sp_16"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/iv_personal_info_head"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_head_normal"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_arrow1"
+                    style="@style/style_width_height_wrap_content"
+                    android:src="@mipmap/ic_arrow_right"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            style="@style/style_flow_people_1_ps_line_grey"></View>
+        <!--姓名-->
+        <RelativeLayout
+            android:id="@+id/rl_persanl_center_user_name"
+            style="@style/style_common_line_style"
+            android:layout_width="match_parent"
+            android:background="@color/color_main_bg_white">
+
+
+            <TextView
+                style="@style/style_width_height_wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:text="姓名"
+                android:textColor="@color/color_main_text_light_black"
+                android:textSize="@dimen/sp_16"/>
+
+            <EditText
+                android:id="@+id/edt_personal_info_edit_user_name"
+                style="@style/style_edit_text_user_info"
+                android:layout_toLeftOf="@+id/iv_arrow2"
+                android:hint="请输入姓名"
+                android:maxLength="15"
+                android:paddingRight="10dp"
+                android:text="@={viewmodel.username}"
+                />
+
+            <ImageView
+                android:id="@id/iv_arrow2"
+                style="@style/style_width_height_wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ic_arrow_right"/>
+
+        </RelativeLayout>
+
+        <View
+            style="@style/style_flow_people_1_ps_line_grey"></View>
+
+        <!--性别-->
+        <RelativeLayout
+            android:id="@+id/rl_persanl_center_sex"
+            style="@style/style_common_line_style"
+            android:layout_width="match_parent"
+            android:background="@color/color_main_bg_white">
+
+            <TextView
+                style="@style/style_width_height_wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:text="性别"
+                android:textColor="@color/color_main_text_light_black"
+                android:textSize="@dimen/sp_16"/>
+
+            <TextView
+                android:id="@+id/tv_personal_info_edit_sex"
+                style="@style/style_edit_text_user_info"
+                android:layout_toLeftOf="@+id/iv_arrow3"
+                android:hint="@string/chooseSex"
+                android:onClick="@{click}"
+                android:paddingRight="10dp"
+                android:text="@={viewmodel.sexShow}"
+                />
+
+            <ImageView
+                android:id="@id/iv_arrow3"
+                style="@style/style_width_height_wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ic_arrow_down"/>
+
+        </RelativeLayout>
+
+        <View
+            style="@style/style_flow_people_1_ps_line_grey"></View>
+        <!--身份证号-->
+        <RelativeLayout
+            android:id="@+id/rl_persanl_center_id_num"
+            style="@style/style_common_line_style"
+            android:layout_width="match_parent"
+            android:background="@color/color_main_bg_white">
+
+            <TextView
+                style="@style/style_width_height_wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:text="身份证号"
+                android:textColor="@color/color_main_text_light_black"
+                android:textSize="@dimen/sp_16"/>
+
+            <EditText
+                android:id="@+id/tv_personal_info_edit_id_num"
+                style="@style/style_edit_text_user_info"
+                android:layout_toLeftOf="@+id/iv_arrow3"
+                android:digits="0123456789xX"
+                android:hint="请输入身份证号"
+                android:maxLength="18"
+                android:onClick="@{click}"
+                android:paddingRight="10dp"
+                android:text="@={viewmodel.cardNo}"
+                />
+
+            <ImageView
+                android:id="@id/iv_arrow3"
+                style="@style/style_width_height_wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ic_arrow_right"/>
+
+        </RelativeLayout>
+
+        <View
+            style="@style/style_flow_people_1_ps_line_grey"></View>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                      style="@style/style_width_height_match_parent"
+                      android:background="@color/color_main_bg_white"
+                      android:orientation="vertical"
+                      android:padding="10dp">
+
+            <TextView
+                style="@style/style_width_height_wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:text="备注"
+                android:textColor="@color/color_main_text_light_black"
+                android:textSize="@dimen/sp_16"/>
+
+            <EditText
+                android:id="@+id/et_personal_info_other"
+                style="@style/style_all_other"
+                android:hint="请输入您的备注信息"
+                android:text="@={viewmodel.note}"/>
+
+            <TextView
+                android:id="@+id/tv_personal_info_save"
+                style="@style/style_common_btn"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/oval_solid_save_bg"
+                android:gravity="center"
+                android:onClick="@{click}"
+                android:text="保存"
+                android:textSize="@dimen/sp_16"/>
+        </LinearLayout>
+
+        <View
+            style="@style/style_flow_people_1_ps_line_grey"></View>
+
+    </LinearLayout>
+</layout>

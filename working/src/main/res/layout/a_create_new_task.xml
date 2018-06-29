@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.unistrong.working.ui.viewmodel.CreateNewTaskVM"/>
+
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--项目名称-->
+            <RelativeLayout
+                android:id="@+id/rl_create_new_task_project_name"
+                style="@style/style_common_line_style"
+                android:onClick="@{click}"
+                >
+
+                <TextView
+                    style="@style/style_width_height_wrap_content_right_arrow"
+                    android:text="项目:"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_create_new_task_project_name"
+                    style="@style/style_edit_text_user_info"
+                    android:layout_toLeftOf="@+id/iv_create_new_task_project_name"
+                    android:hint="必选"
+                    />
+
+                <ImageView
+                    android:id="@id/iv_create_new_task_project_name"
+                    style="@style/style_width_height_wrap_content_arrow2"
+                    />
+
+            </RelativeLayout>
+
+            <View
+                style="@style/style_flow_people_1_dp_height_split_line"/>
+            <!--任务名称-->
+            <RelativeLayout
+                android:id="@+id/rl_create_new_task_task_name"
+                style="@style/style_common_line_style"
+                >
+
+                <TextView
+                    style="@style/style_width_height_wrap_content_right_arrow"
+                    android:text="任务名称:"
+                    />
+
+                <EditText
+                    android:id="@+id/et_create_new_task_title"
+                    style="@style/style_edit_text_user_info"
+                    android:layout_toLeftOf="@+id/iv_create_new_task_title"
+                    android:hint="必填"
+                    android:maxLength="30"
+                    android:text="@={viewmodel.taskName}"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_create_new_task_title"
+                    style="@style/style_width_height_wrap_content_arrow"
+                    />
+            </RelativeLayout>
+
+            <View
+                style="@style/style_flow_people_1_dp_height_split_line"/>
+
+            <!--任务描述-->
+            <RelativeLayout
+                android:id="@+id/rl_create_new_task_des"
+                style="@style/style_common_line_style"
+                android:onClick="@{click}">
+
+                <TextView
+                    style="@style/style_width_height_wrap_content_right_arrow"
+                    android:text="任务描述:"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_create_new_task_des"
+                    style="@style/style_edit_text_user_info"
+                    android:layout_toLeftOf="@+id/iv_create_new_task_des"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@={viewmodel.taskNote}"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_create_new_task_des"
+                    style="@style/style_width_height_wrap_content_arrow"
+                    />
+            </RelativeLayout>
+
+            <View
+                style="@style/style_flow_people_1_dp_height_split_line"/>
+
+            <!--执行人-->
+            <RelativeLayout
+                android:id="@+id/rl_create_new_task_performer"
+                style="@style/style_common_line_style"
+                android:onClick="@{click}"
+                >
+
+                <TextView
+                    style="@style/style_width_height_wrap_content_right_arrow"
+                    android:text="执行人:"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_create_new_task_performer"
+                    style="@style/style_edit_text_user_info"
+                    android:layout_toLeftOf="@+id/iv_create_new_task_performer"
+                    android:maxLength="20"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_create_new_task_performer"
+                    style="@style/style_width_height_wrap_content_arrow2"
+                    />
+            </RelativeLayout>
+
+            <View
+                style="@style/style_flow_people_1_dp_height_split_line"/>
+            <!--截止日期-->
+            <RelativeLayout
+                android:id="@+id/rl_create_new_task_end_date"
+                style="@style/style_common_line_style"
+                android:onClick="@{click}"
+                >
+
+                <TextView
+                    style="@style/style_width_height_wrap_content_right_arrow"
+                    android:text="截止日期:"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_create_new_task_end_date"
+                    style="@style/style_edit_text_user_info"
+                    android:layout_toLeftOf="@+id/iv_create_new_task_end_date"
+                    android:maxLength="20"
+                    android:text="@={viewmodel.endDate}"/>
+
+                <ImageView
+                    android:id="@+id/iv_create_new_task_end_date"
+                    style="@style/style_width_height_wrap_content_arrow2"
+                    />
+            </RelativeLayout>
+
+            <View
+                style="@style/style_flow_people_1_dp_height_split_line"/>
+            <!--照片-->
+            <LinearLayout
+                android:id="@+id/rl_create_new_task_photo"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:onClick="@{click}"
+                android:orientation="vertical"
+                android:padding="10dp"
+                >
+
+                <TextView
+                    style="@style/style_width_height_wrap_content_right_arrow"
+                    android:layout_marginRight="5dp"
+                    android:text="照片: (添加4张图片-向上滑动可再添加4张)"/>
+
+                <GridView
+                    android:id="@+id/gv_create_new_task"
+                    android:verticalSpacing="@dimen/dp_4"
+                    style="@style/style_add_photo_grid_view_2_line"/>
+
+            </LinearLayout>
+
+            <View
+                style="@style/style_flow_people_1_dp_height_split_line"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</layout>

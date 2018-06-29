@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="content"
+            type="java.lang.String"/>
+
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_grouping_add"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_margin="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            >
+
+
+            <TextView
+                android:id="@+id/iv_grouping_add"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:text="+"
+                android:textSize="30sp"/>
+
+            <TextView
+                android:id="@+id/tv_project_member_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:text="添加分组"
+                android:textColor="#000"
+                android:textSize="@dimen/sp_16"/>
+
+
+        </LinearLayout>
+
+
+        <View
+            style="@style/style_flow_people_10_dp_height_split_line"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/msg_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:overScrollMode="never"/>
+    </LinearLayout>
+</layout>

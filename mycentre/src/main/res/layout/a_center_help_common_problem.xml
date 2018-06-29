@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="content"
+            type="java.lang.String"/>
+
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  style="@style/style_width_height_match_parent"
+                  android:orientation="vertical">
+
+
+        <!--考勤定位失败怎么办-->
+        <RelativeLayout
+            android:id="@+id/rl_common_problem_location_fail"
+            style="@style/style_common_line_style"
+            android:onClick="@{click}">
+
+            <TextView
+                style="@style/style_width_height_wrap_content_right_arrow"
+                android:text="考勤定位失败怎么办"/>
+
+            <ImageView style="@style/style_width_height_wrap_content_arrow"/>
+
+        </RelativeLayout>
+
+        <View style="@style/style_flow_people_1_dp_height_split_line"/>
+        <!--如何更新任务进度-->
+        <RelativeLayout
+            android:id="@+id/rl_common_problem_update_program_progress"
+            style="@style/style_common_line_style"
+            android:onClick="@{click}">
+
+            <TextView
+                style="@style/style_width_height_wrap_content_right_arrow"
+                android:text="如何更新任务进度"/>
+
+            <ImageView style="@style/style_width_height_wrap_content_arrow"/>
+        </RelativeLayout>
+
+        <View style="@style/style_flow_people_1_dp_height_split_line"/>
+        <!--为什么会上传图片失败-->
+        <RelativeLayout
+            android:id="@+id/rl_common_problem_photo_upload_fail"
+            style="@style/style_common_line_style"
+            android:onClick="@{click}">
+
+            <TextView
+                style="@style/style_width_height_wrap_content_right_arrow"
+                android:text="为什么会上传图片失败"/>
+
+            <ImageView style="@style/style_width_height_wrap_content_arrow"/>
+        </RelativeLayout>
+
+        <View style="@style/style_flow_people_1_dp_height_split_line"/>
+    </LinearLayout>
+</layout>

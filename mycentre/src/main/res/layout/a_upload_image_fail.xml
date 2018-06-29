@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="java.lang.String"/>
+
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="        保证手机网络状态良好,因为，图片上传会占用更多的网络资源。选定图片后会有进度条显示，那是因为，我们的图片是选择一张，上传一张来进行的。"
+                android:textColor="#666"
+                android:textSize="@dimen/sp_16"/>
+        </LinearLayout>
+
+    </ScrollView>
+</layout>

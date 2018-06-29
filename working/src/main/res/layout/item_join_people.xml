@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.unistrong.working.ui.viewmodel.JoinPeopleVM"/>
+
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_project_member_name"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical"
+            android:text="@{viewmodel.peopleName}"
+            android:textColor="#000"
+            android:textSize="@dimen/sp_16"/>
+
+        <ImageView
+            android:id="@+id/iv_project_member_box"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/ic_arrow_down"
+            />
+
+        <View
+            style="@style/style_flow_people_1_dp_height_split_line"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+</layout>

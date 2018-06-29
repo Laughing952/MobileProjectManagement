@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.unistrong.working.ui.activity.A_General_Request_Details"/>
+
+        <variable
+            name="viewmodel"
+            type="com.unistrong.working.response.GeneralRequestItemDetailRep"/>
+
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener"/>
+
+        <variable
+            name="from"
+            type="java.lang.Integer"/>
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <!--申请人-->
+                <RelativeLayout
+                    android:id="@+id/rl_general_request_i_approved_project"
+                    style="@style/style_common_line_style"
+                    android:onClick="@{click}"
+                    >
+
+                    <TextView
+                        style="@style/style_width_height_wrap_content_right_arrow"
+                        android:text="申请人:"
+                        />
+
+                    <TextView
+                        android:id="@+id/et_general_request_i_approved_project"
+                        style="@style/style_edit_text_user_info"
+                        android:maxLength="20"
+                        android:text="@={viewmodel.userName}"
+                        />
+
+                </RelativeLayout>
+
+                <View
+                    style="@style/style_flow_people_1_dp_height_split_line"/>
+                <!--审批人-->
+                <RelativeLayout
+                    android:id="@+id/rl_general_request_i_approved_approve_person"
+                    style="@style/style_common_line_style"
+                    android:onClick="@{click}"
+                    >
+
+                    <TextView
+                        style="@style/style_width_height_wrap_content_right_arrow"
+                        android:text="审批人:"
+                        />
+
+                    <TextView
+                        android:id="@+id/et_general_request_i_approved_approve_person"
+                        style="@style/style_edit_text_user_info"
+                        android:maxLength="20"
+                        android:text="@={viewmodel.approveCkUser}"
+
+                        />
+
+                </RelativeLayout>
+
+                <View
+                    style="@style/style_flow_people_1_dp_height_split_line"/>
+
+                <!--标题-->
+                <RelativeLayout
+                    android:id="@+id/rl_general_request_i_approved_title"
+                    style="@style/style_common_line_style"
+                    android:onClick="@{click}"
+                    >
+
+                    <TextView
+                        style="@style/style_width_height_wrap_content_right_arrow"
+                        android:text="标题:"
+                        />
+
+                    <TextView
+                        android:id="@+id/et_general_request_i_approved_title"
+                        style="@style/style_edit_text_user_info"
+                        android:maxLength="20"
+                        android:text="@={viewmodel.approveTitle}"
+                        />
+
+                </RelativeLayout>
+
+                <View
+                    style="@style/style_flow_people_1_dp_height_split_line"/>
+
+
+                <!--内容-->
+                <RelativeLayout
+                    android:id="@+id/rl_general_request_i_approved_content"
+                    style="@style/style_common_line_style"
+                    android:onClick="@{click}"
+                    >
+
+                    <TextView
+                        style="@style/style_width_height_wrap_content_right_arrow"
+                        android:text="内容:"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_general_request_i_approved_content"
+                        style="@style/style_edit_text_user_info"
+                        android:ellipsize="end"
+                        android:text="@={viewmodel.approveNote}"
+                        />
+
+                </RelativeLayout>
+
+                <View
+                    style="@style/style_flow_people_1_dp_height_split_line"/>
+                <!--图片-->
+                <LinearLayout
+                    android:id="@+id/rl_general_request_i_approved_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="@{click}"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    >
+
+                    <TextView
+                        style="@style/style_width_height_wrap_content_right_arrow"
+                        android:layout_marginRight="5dp"
+                        android:text="图片: "/>
+
+                    <GridView
+                        android:id="@+id/gv_general_request_i_approved"
+                        android:verticalSpacing="@dimen/dp_4"
+                        style="@style/style_add_photo_grid_view_2_line"/>
+
+
+                </LinearLayout>
+
+                <View
+                    style="@style/style_flow_people_1_dp_height_split_line"/>
+                <!--抄送人-->
+                <RelativeLayout
+                    android:id="@+id/rl_general_request_i_approved_cc_person"
+                    style="@style/style_common_line_style"
+                    android:onClick="@{click}"
+                    >
+
+                    <TextView
+                        style="@style/style_width_height_wrap_content_right_arrow"
+                        android:text="抄送人:"
+                        />
+
+                    <TextView
+                        android:id="@+id/et_general_request_i_approved_cc_person"
+                        style="@style/style_edit_text_user_info"
+                        android:maxLength="20"
+                        android:text="@={viewmodel.approveCcUser}"
+
+                        />
+
+                </RelativeLayout>
+
+                <View
+                    style="@style/style_flow_people_1_dp_height_split_line"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerview"
+                    android:background="#ccc"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+        </ScrollView>
+        <!--意见-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_main_bg_white"
+            android:layout_above="@id/rg_working_task"
+            android:orientation="vertical"
+            android:visibility="@{from==A_General_Request_Details.FROMIAPPROVED?View.VISIBLE:View.GONE}"
+            android:padding="10dp">
+
+            <EditText
+                android:id="@+id/et_general_request_i_approved_opinion"
+                style="@style/style_all_opinion"
+                />
+            <View
+                style="@style/style_flow_people_1_dp_height_split_line"/>
+
+        </LinearLayout>
+        <RadioGroup
+            android:id="@+id/rg_working_task"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:visibility="@{from==-1?View.GONE:View.VISIBLE}"
+            android:orientation="horizontal"
+            >
+
+            <RadioButton
+                android:id="@+id/rb_general_request_i_approved_agree"
+                style="@style/style_general_approval_bottom_rb"
+                android:onClick="@{click}"
+                android:visibility="@{from==A_General_Request_Details.FROMIAPPROVED?View.VISIBLE:View.GONE}"
+                android:text="同意"/>
+
+
+            <RadioButton
+                android:id="@+id/rb_general_request_i_approved_not_agree"
+                style="@style/style_general_approval_bottom_rb"
+                android:onClick="@{click}"
+                android:visibility="@{from==A_General_Request_Details.FROMIAPPROVED?View.VISIBLE:View.GONE}"
+                android:text="不同意"/>
+
+
+            <RadioButton
+                android:id="@+id/rb_general_request_i_approved_transfer"
+                style="@style/style_general_approval_bottom_rb"
+                android:onClick="@{click}"
+                android:visibility="@{from==A_General_Request_Details.FROMIAPPROVED?View.VISIBLE:View.GONE}"
+                android:text="转交"/>
+            <RadioButton
+                android:id="@+id/rb_general_request_i_approved_cancel"
+                style="@style/style_general_approval_bottom_rb"
+                android:onClick="@{click}"
+                android:visibility="@{from==A_General_Request_Details.FROMICOMMIT?View.VISIBLE:View.GONE}"
+                android:text="取消"/>
+            <RadioButton
+                android:id="@+id/rb_general_request_i_approved_cc_me"
+                style="@style/style_general_approval_bottom_rb"
+                android:onClick="@{click}"
+                android:visibility="@{from==A_General_Request_Details.FROMCCME?View.VISIBLE:View.GONE}"
+                android:text="已阅"/>
+
+        </RadioGroup>
+    </RelativeLayout>
+</layout>

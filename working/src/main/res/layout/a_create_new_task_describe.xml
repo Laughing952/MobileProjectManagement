@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="content"
+            type="java.lang.String"/>
+
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  style="@style/style_width_height_match_parent"
+                  android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_create_new_task_describe_des"
+            style="@style/style_all_other"
+            android:cursorVisible="true"
+            android:hint="请输入任务描述"/>
+
+        <TextView
+            android:id="@+id/tv_create_new_task_describe_confirm"
+            style="@style/style_common_btn"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/oval_solid_save_bg"
+            android:onClick="@{click}"
+            android:gravity="center"
+            android:text="确定"
+            android:textSize="@dimen/sp_16"/>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--审批流程item-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="80dp"
+              android:orientation="horizontal"
+              android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="3dp">
+
+        <TextView
+            android:id="@+id/tv_suggest_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2018.5.22"
+            android:textColor="#000"
+            android:textSize="@dimen/sp_16"/>
+
+        <TextView
+            android:id="@+id/tv_suggest_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="09:19"
+            android:textColor="#000"
+            android:textSize="@dimen/sp_16"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <ImageView
+            android:id="@+id/tv_suggest_head_img"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@mipmap/ic_camera"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_suggest_leader_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="yuan_chao"
+                android:textColor="#000"
+                android:textSize="@dimen/sp_16"/>
+
+
+            <TextView
+                android:id="@+id/tv_suggest_suggest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="意见：-"
+                android:textColor="#000"
+                android:textSize="@dimen/sp_16"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_suggest_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:drawableLeft="@mipmap/ic_arrow_right"
+            android:text="laughing"
+            android:textColor="@color/base_title_bg"
+            android:textSize="@dimen/sp_16"/>
+    </LinearLayout>
+
+</LinearLayout>

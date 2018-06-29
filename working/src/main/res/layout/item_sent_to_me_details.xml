@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.unistrong.working.response.MessageEntityRep"/>
+
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/tv_item_sent_to_me_details_date"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@={viewmodel.feedback}"
+            android:textColor="@color/color_date"
+            android:textSize="@dimen/sp_14"/>
+
+            <!--android:text="不经一番寒傲骨，哪得梅花扑鼻香。不入炉火任其燎，怎知是否是真金！"-->
+
+            <TextView
+                android:id="@+id/tv_item_sent_to_me_details_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toLeftOf="@id/iv_item_sent_to_me_details_user_head"
+                android:background="@drawable/chatfrom_bg"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="left|center"
+                android:lineSpacingExtra="2dp"
+                android:minHeight="50dp"
+                android:text="@={viewmodel.feedbackNote}"
+                android:textColor="#ff000000"
+                android:textSize="@dimen/sp_14"/>
+
+    </LinearLayout>
+
+</layout>

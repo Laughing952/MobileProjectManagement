@@ -1,0 +1,1 @@
+include ':app', ':waterbase', ':RecyclerViewLibrary', ':global', ':mycentre', ':project', ':login', ':working', ":qrcode", ":baidumaplibrary"

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.unistrong.working.ui.viewmodel.GeneralCCMeItemVM"/>
+
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    style="@style/style_item_my_approval_rl_outer">
+
+        <ImageView
+            android:id="@+id/iv"
+            style="@style/style_item_my_approval_iv_1"
+            android:src="@mipmap/ic_camera"/>
+
+        <LinearLayout
+            style="@style/style_item_my_approval_ll_2"
+            android:layout_toRightOf="@id/iv">
+
+            <TextView
+                android:id="@+id/tv"
+                style="@style/style_item_my_approval_ll_2_tv_16sp"
+                android:textColor="@{viewmodel.titleColor}"
+                android:text="@{viewmodel.userName}"/>
+
+            <TextView
+                android:id="@+id/tv2"
+                style="@style/style_item_my_approval_ll_3_tv_14sp"
+                android:text="@{viewmodel.approveNote}"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/style_item_my_approval_ll_3">
+
+            <TextView
+                android:id="@+id/tv3"
+                style="@style/style_item_my_approval_ll_3_tv_14sp"
+                android:text="@{viewmodel.approveTime}"/>
+
+            <TextView
+                android:id="@+id/tv4"
+                style="@style/style_item_my_approval_ll_3_tv_14sp"
+            android:text="@{viewmodel.approveStatus}"/>
+
+        </LinearLayout>
+
+        <View
+            style="@style/style_flow_people_1_dp_height_split_line"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+</layout>

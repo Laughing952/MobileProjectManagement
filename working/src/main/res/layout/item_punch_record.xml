@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.unistrong.working.response.PunchRecordRep"/>
+
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:background="@color/white"
+                  android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+
+            <!--打卡类型-->
+            <TextView
+                android:id="@+id/tv_punch_record_type"
+                style="@style/style_punch_record_tv_left"
+                android:text="@{viewmodel.signinType}"
+                />
+            <!--打卡时间-->
+            <TextView
+                android:id="@+id/tv_punch_record_type_r"
+                style="@style/style_punch_record_tv_right"
+                android:text="@{viewmodel.signinTime}"/>
+        </LinearLayout>
+        <!--打卡位置-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_punch_record_location"
+                style="@style/style_punch_record_tv_left"
+                android:text="打卡位置："/>
+
+            <TextView
+                android:id="@+id/tv_punch_record_location_r"
+                style="@style/style_punch_record_tv_right"
+                android:text="@{viewmodel.location}"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+
+            <!--考勤点-->
+            <TextView
+                android:id="@+id/tv_punch_record_point"
+                style="@style/style_punch_record_tv_left"
+                android:text="考  勤  点："/>
+
+            <TextView
+                android:id="@+id/tv_punch_record_point_r"
+                style="@style/style_punch_record_tv_right"
+                android:text="@{viewmodel.signinPointName}"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <!--备注或距离-->
+            <TextView
+                android:id="@+id/tv_punch_record_distance"
+                style="@style/style_punch_record_tv_left"
+                android:text="距        离："/>
+
+            <TextView
+                android:id="@+id/tv_punch_record_distance_r"
+                style="@style/style_punch_record_tv_right"
+                android:text="@{viewmodel.signinRange}"/>
+        </LinearLayout>
+
+        <View
+            style="@style/style_flow_people_8_dp_height_split_line"
+            android:layout_marginTop="5dp"/>
+    </LinearLayout>
+
+</layout>

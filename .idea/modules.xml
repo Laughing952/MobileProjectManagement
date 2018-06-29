@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MobileProjectManagement.iml" filepath="$PROJECT_DIR$/MobileProjectManagement.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RecyclerViewLibrary/RecyclerViewLibrary.iml" filepath="$PROJECT_DIR$/RecyclerViewLibrary/RecyclerViewLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/baidumaplibrary/baidumaplibrary.iml" filepath="$PROJECT_DIR$/baidumaplibrary/baidumaplibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/global/global.iml" filepath="$PROJECT_DIR$/global/global.iml" />
+      <module fileurl="file://$PROJECT_DIR$/login/login.iml" filepath="$PROJECT_DIR$/login/login.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mycentre/mycentre.iml" filepath="$PROJECT_DIR$/mycentre/mycentre.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project/project.iml" filepath="$PROJECT_DIR$/project/project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qrcode/qrcode.iml" filepath="$PROJECT_DIR$/qrcode/qrcode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/waterbase/waterbase.iml" filepath="$PROJECT_DIR$/waterbase/waterbase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/working/working.iml" filepath="$PROJECT_DIR$/working/working.iml" />
+    </modules>
+  </component>
+</project>

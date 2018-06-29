@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="content"
+            type="java.lang.String"/>
+
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  style="@style/style_width_height_match_parent"
+                  android:orientation="vertical">
+
+
+        <!--如何打卡-->
+        <RelativeLayout
+            android:id="@+id/rl_novice_guide_punch"
+            style="@style/style_common_line_style"
+            android:onClick="@{click}">
+
+            <TextView
+                style="@style/style_width_height_wrap_content_right_arrow"
+                android:text="如何签到打卡"/>
+
+            <ImageView style="@style/style_width_height_wrap_content_arrow"/>
+
+        </RelativeLayout>
+
+        <View style="@style/style_flow_people_1_dp_height_split_line"/>
+        <!--如何创建项目-->
+        <RelativeLayout
+            android:id="@+id/rl_novice_guide_create_program"
+            style="@style/style_common_line_style"
+            android:onClick="@{click}">
+
+            <TextView
+                style="@style/style_width_height_wrap_content_right_arrow"
+                android:text="如何创建项目"/>
+
+            <ImageView style="@style/style_width_height_wrap_content_arrow"/>
+        </RelativeLayout>
+
+        <View style="@style/style_flow_people_1_dp_height_split_line"/>
+        <!--如何创建任务-->
+        <RelativeLayout
+            android:id="@+id/rl_novice_guide_create_task"
+            style="@style/style_common_line_style"
+            android:onClick="@{click}">
+
+            <TextView
+                style="@style/style_width_height_wrap_content_right_arrow"
+                android:text="如何创建任务"/>
+
+            <ImageView style="@style/style_width_height_wrap_content_arrow"/>
+        </RelativeLayout>
+
+        <View style="@style/style_flow_people_1_dp_height_split_line"/>
+    </LinearLayout>
+</layout>

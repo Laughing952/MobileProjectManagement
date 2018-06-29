@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="java.lang.String"/>
+
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:overScrollMode="never"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="        打开app ---> 点击签到打卡 ---> 进入考勤记录页面，点击右上角 “去签到 ---> 选择允许定位 ---> 进入定位打卡页面，会看到手机点位到当前位置。点击右上角”打卡”按钮，选择签到名称，继续选择打卡类型（包括上班打卡，下班打卡，外勤打卡），最后查看位置是否正确，点击确定即可完成。成功后系统会提示打卡成功"
+                android:textColor="#666"
+                android:textSize="@dimen/sp_16"/>
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="        注意：1.保证您的GPS时开启的。2.保证手机网络状态良好。3.如果地图未加载出来，注意要查看最终打卡位置是否正确，如果正确，即使地图未加载出来也能打卡成功。"
+                android:textColor="#666"
+                android:textSize="@dimen/sp_16"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>

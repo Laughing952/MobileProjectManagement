@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.mycentre.ui.viewmodel.JurisdictionVM" />
+
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1px"
+        android:background="@android:color/white"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            app:res="@{viewModel.imageRes}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/imageview"
+            android:text="@{viewModel.jurisdictionName}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_14" />
+
+        <ImageView
+            android:id="@+id/iv_checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:onClick="@{click}"
+            android:padding="12dp"
+            app:res="@{viewModel.checkBoxImgRes}" />
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.mycentre.ui.viewmodel.DivisionalManagementVM" />
+
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@{viewModel.content}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_14"
+            app:marginLeft="@{viewModel.marginLeft}" />
+
+        <ImageView
+            android:id="@+id/iv_del"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:onClick="@{click}"
+            android:padding="12dp"
+            android:visibility="@{viewModel.gone?View.INVISIBLE:View.VISIBLE}"
+            android:src="@mipmap/ic_del" />
+
+
+
+        <ImageView
+            android:id="@+id/iv_updata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/iv_del"
+            android:onClick="@{click}"
+            android:padding="12dp"
+            android:visibility="@{viewModel.gone?View.INVISIBLE:View.VISIBLE}"
+            android:src="@mipmap/ic_edit" />
+
+
+    </RelativeLayout>
+</layout>

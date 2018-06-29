@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.project.request.CreateProjectReq"/>
+
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+
+            <EditText
+                android:id="@+id/et_create_project_program_simple_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="请输入项目简称"
+                android:minLines="1"
+                android:singleLine="true"
+                android:text="@={viewmodel.itemNote}"
+                android:textSize="@dimen/sp_16"
+                />
+        </LinearLayout>
+
+        <View
+            style="@style/style_flow_people_1_dp_height_split_line"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <EditText
+                android:id="@+id/et_create_project_program_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="请输入项目全称"
+                android:minLines="1"
+                android:singleLine="true"
+                android:text="@={viewmodel.itemName}"
+                android:textSize="@dimen/sp_16"
+                />
+        </LinearLayout>
+
+        <View
+            style="@style/style_flow_people_1_dp_height_split_line"/>
+
+        <!--项目负责人-->
+        <RelativeLayout
+            android:id="@+id/rl_create_project_manager"
+            style="@style/style_common_line_style"
+            android:onClick="@{click}"
+            >
+
+            <TextView
+                style="@style/style_width_height_wrap_content_right_arrow"
+                android:text="项目负责人"
+                />
+
+            <TextView
+                android:id="@+id/edt_personal_info_edit_leader"
+                style="@style/style_edit_text_user_info"
+                android:layout_toLeftOf="@+id/iv_arrow2"
+                android:maxLength="13"
+                android:onClick="@{click}"
+                android:text="@={viewmodel.itemHead}"
+                />
+
+
+            <ImageView
+                android:id="@id/iv_arrow2"
+                style="@style/style_width_height_wrap_content_arrow"
+                />
+
+        </RelativeLayout>
+
+        <View
+            style="@style/style_flow_people_1_dp_height_split_line"/>
+        <!--项目成员-->
+        <RelativeLayout
+            android:id="@+id/rl_create_project_member"
+            style="@style/style_common_line_style"
+            android:onClick="@{click}"
+            >
+
+            <TextView
+                style="@style/style_width_height_wrap_content_right_arrow"
+                android:text="项目成员"
+                />
+
+            <TextView
+                android:id="@+id/edt_personal_info_person_num"
+                style="@style/style_edit_text_user_info"
+                android:layout_toLeftOf="@+id/iv_arrow_num"
+                android:ellipsize="end"
+                />
+
+            <ImageView
+                android:id="@+id/iv_arrow_num"
+                style="@style/style_width_height_wrap_content_arrow"
+                />
+        </RelativeLayout>
+
+        <View
+            style="@style/style_flow_people_1_dp_height_split_line"/>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                      style="@style/style_width_height_match_parent"
+                      android:background="@color/color_main_bg_white"
+                      android:orientation="vertical"
+                      android:padding="10dp">
+
+            <TextView
+                style="@style/style_width_height_wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="备注"
+                android:textColor="@color/color_main_text_light_black"
+                android:textSize="@dimen/sp_16"/>
+
+            <EditText
+                android:id="@+id/et_personal_info_other"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/shape_input_area"
+                android:gravity="left|top"
+                android:hint="请输入您的备注信息"
+                android:padding="5dp"
+                android:text="@={viewmodel.remark}"
+                android:textSize="@dimen/sp_14"/>
+
+        </LinearLayout>
+
+        <View
+            style="@style/style_flow_people_1_ps_line_grey"></View>
+
+    </LinearLayout>
+</layout>

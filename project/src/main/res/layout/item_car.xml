@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="materialsReq"
+            type="com.project.request.MaterialsReq" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_del"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="12dp"
+                android:src="@mipmap/ic_del" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/iv_del"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{materialsReq.materialsName}"
+                    android:textColor="@color/main_color"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{materialsReq.standardName}"
+                    android:textColor="@color/color_main_text_light_black"
+                    android:textSize="@dimen/sp_12" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/bg_record_merit"
+                    android:gravity="center"
+                    android:text="@{materialsReq.askOutNum}"
+                    android:textColor="@color/main_color"
+                    android:textSize="@dimen/sp_12" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@{materialsReq.companyName}"
+                    android:textColor="@color/color_main_text_light_black"
+                    android:textSize="@dimen/sp_12" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <include layout="@layout/line1px" />
+    </LinearLayout>
+</layout>

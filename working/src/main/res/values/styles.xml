@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--工作台子条目样式-->
+    <style name="style_working_rl_item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+    </style>
+    <!--工作台子条目中线性布局样式-->
+    <style name="style_working_ll_son_item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <!--工作台标题图标样式-->
+    <style name="style_working_image">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_alignParentLeft">true</item>
+    </style>
+
+    <!--工作台标题样式-->
+    <style name="style_working_title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+    <!--工作台描述样式-->
+    <style name="style_working_describe">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:textColor">#666</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+    <!--通用申请-我的审批-item最外层RelativeLayout样式-->
+    <style name="style_item_my_approval_rl_outer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:background">@color/white</item>
+    </style>
+    <!--通用申请-我的审批-item内层第一部分ImageView样式-->
+    <style name="style_item_my_approval_iv_1">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_alignParentLeft">true</item>
+    </style>
+    <!--通用申请-我的审批-item内层第二部分LinearLayout样式-->
+    <style name="style_item_my_approval_ll_2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <!--通用申请-我的审批-item内层第二部分TextView样式-->
+    <style name="style_item_my_approval_ll_2_tv_16sp">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <!--通用申请-我的审批-item内层第三部分LinearLayout样式-->
+    <style name="style_item_my_approval_ll_3">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <!--通用申请-我的审批-item内层第二,三部分TextView样式-->
+    <style name="style_item_my_approval_ll_3_tv_14sp">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#666</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+    <!--任务底部消息线性布局-->
+    <style name="style_working_send_task_mes_ll_outer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <!--任务底部消息线性布局子1：-->
+    <style name="style_working_send_task_mes_iv_inner">
+        <item name="android:layout_width">44dp</item>
+        <item name="android:layout_height">44dp</item>
+    </style>
+    <!--任务底部消息线性布局子2：-->
+    <style name="style_working_send_task_mes_et_inner">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:background">@drawable/shape_edit_text_fillet</item>
+    </style>
+    <!--任务底部消息线性布局子3：-->
+    <style name="style_working_send_task_mes_tv_inner">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@drawable/selector_text_click</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+    <!--start聊天用的style-->
+    <style name="chat_text_date_style">
+        <item name="android:padding">2dp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:background">#bfbfbf</item>
+    </style>
+    <!--聊天时间文字样式-->
+    <style name="chat_content_date_style">
+        <item name="android:minHeight">50dp</item>
+        <item name="android:gravity">left|center</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:background">#bfbfbf</item>
+    </style>
+    <!--聊天文字名字样式-->
+    <style name="chat_text_name_style">
+        <item name="android:textColor">#818181</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <!--end聊天用的style -->
+
+    <!--工作任务页面中三个tab下面的文字样式-->
+    <style name="style_sent_to_me_tv_below_tab">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@drawable/selector_text_click</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:drawableRight">@mipmap/ic_arrow_down</item>
+    </style>
+    <!--打卡设置页面样式：外层线性布局-->
+    <style name="style_working_punch_ll">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:padding">12dp</item>
+    </style>
+    <!--打卡设置页面样式：星期-->
+    <style name="style_working_punch_week">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+    <!--打卡设置页面样式：时间-->
+
+    <style name="style_working_punch_time">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">#ccc</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+    <!--搜索框：已复用-->
+    <style name="style_search_box2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:background">@drawable/search_shape</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/color_main_text_light_black</item>
+        <item name="android:textColorHint">@color/color_main_text_light_black</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="style_add_custom_attendance_iv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginLeft">10dp</item>
+    </style>
+    <!--打卡记录1-->
+    <style name="style_punch_record_tv_left">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+    <!--打卡记录2-->
+    <style name="style_punch_record_tv_right">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">2</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:textColor">#666</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+
+    <!--打卡设置页面样式2：时间-->
+    <style name="style_working_punch_time2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">#ccc</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+</resources>

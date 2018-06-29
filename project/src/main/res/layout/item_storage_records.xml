@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.project.response.OutboundRecordsRep"/>
+
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <!--正在执行的项目-->
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingTop="5dp">
+
+
+        <LinearLayout
+            android:id="@+id/ll_project_doing_project"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/iv_project_doing_more"
+            android:orientation="vertical">
+            <!--领料时间-->
+            <TextView
+                android:id="@+id/tv_outbound_records_name"
+                style="@style/style_project_doing_tv"
+                android:ellipsize="end"
+                android:text="2015-05-18"
+                android:textSize="@dimen/sp_16"/>
+            <!--领料人-->
+            <TextView
+                android:id="@+id/tv_outbound_records_principal"
+                style="@style/style_project_doing_tv"
+                android:text="领料人：袁超"
+                android:textColor="#666666"
+                android:textSize="@dimen/sp_14"/>
+
+        </LinearLayout>
+
+
+        <!--物资数量-->
+        <TextView
+            android:id="@+id/tv_outbound_records_item"
+            style="@style/style_project_doing_tv"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="1项物资"
+            android:textColor="@color/base_title_bg"
+            android:textSize="@dimen/sp_14"/>
+
+        <View
+            style="@style/style_flow_people_1_dp_height_split_line"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My Centre</string>
+    <string name="apk_refresh">软件更新</string>
+    <string name="new_apk_refresh">有新版本,建议更新!</string>
+    <string name="refresh">更新</string>
+    <string name="refresh_late">稍候更新</string>
+    <string name="dialog_check_version">检测版本</string>
+</resources>

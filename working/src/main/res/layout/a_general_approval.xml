@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="java.lang.String" />
+
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/rg_book_order"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb1"
+                    style="@style/style_general_approval_rb"
+                    android:checked="true"
+                    android:text="我审批的" />
+
+
+                <RadioButton
+                    android:id="@+id/rb2"
+                    style="@style/style_general_approval_rb"
+                    android:text="我提交的" />
+
+
+                <RadioButton
+                    android:id="@+id/rb3"
+                    style="@style/style_general_approval_rb"
+                    android:text="抄送我的" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_general_approval_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        </FrameLayout>
+    </LinearLayout>
+</layout>

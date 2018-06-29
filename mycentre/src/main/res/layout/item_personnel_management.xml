@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:glide="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="viewModel"
+            type="com.mycentre.ui.viewmodel.PersonnelManagementVM" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1px"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/iv_head"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            glide:mycentreurl="@{viewModel.headUrl}" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/iv_head"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.name}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@{viewModel.duty}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_12" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_updata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{click}"
+                android:padding="12dp"
+                android:src="@mipmap/ic_edit" />
+
+            <ImageView
+                android:id="@+id/iv_del"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{click}"
+                android:padding="12dp"
+                android:src="@mipmap/ic_del" />
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

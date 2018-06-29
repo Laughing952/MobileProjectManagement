@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.mycentre.request.UserChangePhoneReq"/>
+
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener"/>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:orientation="vertical"
+            >
+
+            <EditText
+                android:id="@+id/et_old_phone_num"
+                style="@style/edit_login_style"
+                android:layout_marginTop="20dp"
+                android:digits="0123456789"
+                android:drawablePadding="12dp"
+                android:drawableStart="@mipmap/ic_phone"
+                android:hint="请输入原手机号"
+                android:maxLength="11"
+                android:text="@={viewmodel.oldMobile}"/>
+
+            <EditText
+                android:id="@+id/et_new_phone_num"
+                style="@style/edit_login_style2"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/et_old_phone_num"
+                android:layout_marginTop="15dp"
+                android:digits="0123456789"
+                android:hint="请输入新手机号"
+                android:maxLength="11"
+                android:text="@={viewmodel.mobile}"/>
+
+            <TextView
+                android:id="@+id/tv_submit"
+                style="@style/BottomBottomStyle"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/et_old_phone_num"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@id/et_new_phone_num"
+                android:onClick="@{click}"
+                android:text="提交修改"/>
+        </RelativeLayout>
+    </FrameLayout>
+
+</layout>

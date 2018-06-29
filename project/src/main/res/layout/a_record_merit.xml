@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/line">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:text="我的记工"
+                android:textColor="@color/color_main_text_light_black"
+                android:textSize="@dimen/sp_12" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+
+                android:background="@android:color/white"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/iv_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:onClick="@{click}"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:src="@mipmap/topbar_icon_more_blue" />
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="2018年5月23日"
+                    android:textColor="@color/main_color"
+                    android:textSize="@dimen/sp_14" />
+
+                <ImageView
+                    android:id="@+id/iv_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:onClick="@{click}"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:src="@mipmap/topbar_icon_more_blue" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@android:color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="日"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="一"
+                    android:textColor="@color/main_color"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="二"
+                    android:textColor="@color/main_color"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="三"
+                    android:textColor="@color/main_color"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="四"
+                    android:textColor="@color/main_color"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="五"
+                    android:textColor="@color/main_color"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="六"
+                    android:textColor="@color/main_color"
+                    android:textSize="@dimen/sp_14" />
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_calendar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_record_merit_statistics"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="8dp"
+                android:background="@android:color/white"
+                android:onClick="@{click}"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="项目记工统计"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+
+                <ImageView
+                    android:id="@+id/iv01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/ic_arrow_right" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_toLeftOf="@id/iv01"
+                    android:text="2.0工时"
+                    android:textColor="@color/main_color"
+                    android:textSize="@dimen/sp_14" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_workers_register"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="1px"
+                android:background="@android:color/white"
+                android:onClick="@{click}"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="我的工人名册"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/ic_arrow_right" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

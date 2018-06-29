@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.unistrong.working.ui.viewmodel.GeneralApprovalIApprovedVM"/>
+
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_sent_to_me_details_words"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="44dp"
+            android:overScrollMode="never"
+            android:scrollbars="none"/>
+
+        <LinearLayout
+            style="@style/style_working_send_task_mes_ll_outer">
+
+            <ImageView
+                android:id="@+id/iv1"
+                style="@style/style_working_send_task_mes_iv_inner"
+                android:src="@mipmap/ic_camera"/>
+
+            <ImageView
+                android:id="@+id/iv2"
+                style="@style/style_working_send_task_mes_iv_inner"
+                android:src="@mipmap/ic_camera"/>
+
+            <EditText
+                android:id="@+id/et_i_participated_details_msg"
+                style="@style/style_working_send_task_mes_et_inner"
+                android:hint="发送任务消息"/>
+
+            <TextView
+                android:id="@+id/tv_i_participated_details_send"
+                style="@style/style_working_send_task_mes_tv_inner"
+                android:background="@color/white"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="@{click}"
+                android:text="发送"/>
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

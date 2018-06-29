@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="workerTypeRep"
+            type="com.project.response.WorkerTypeRep" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="12dp"
+            android:gravity="center_vertical"
+            android:text="@{workerTypeRep.content}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_14" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line" />
+    </LinearLayout>
+</layout>

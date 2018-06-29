@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="jurisdictionRep"
+            type="com.mycentre.response.JurisdictionRep" />
+    </data>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="@dimen/dp_4"
+        android:layout_marginRight="@dimen/dp_4"
+        android:layout_marginTop="@dimen/dp_4"
+        android:background="@drawable/bg_text_black"
+        android:gravity="center"
+        android:text="@{jurisdictionRep.jurisdictionName}"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_14">
+
+    </TextView>
+</layout>

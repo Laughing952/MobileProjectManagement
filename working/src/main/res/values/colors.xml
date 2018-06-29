@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_date">#818181</color>
+    <color name="color_no_dispose">#000</color>
+    <color name="color_disposed">#666</color>
+</resources>

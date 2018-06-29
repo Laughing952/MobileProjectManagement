@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:glide="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="workerReq"
+            type="com.project.request.WorkerReq" />
+
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/line">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@android:color/white"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="姓名"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:gravity="center_vertical|right"
+                    android:hint="(必填)"
+
+                    android:minWidth="150dp"
+                    android:singleLine="true"
+                    android:text="@={workerReq.workerName}"
+                    android:textColor="@color/color_main_text_light_black"
+                    android:textSize="@dimen/sp_14" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="1px"
+                android:background="@android:color/white"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="证件号码"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:digits="xX0123456789"
+                    android:gravity="center_vertical|right"
+                    android:hint="(必填)"
+                    android:maxLength="18"
+                    android:minWidth="150dp"
+                    android:singleLine="true"
+                    android:text="@={workerReq.workerIDCardNum}"
+                    android:textColor="@color/color_main_text_light_black"
+                    android:textSize="@dimen/sp_14" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="地址"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="12dp"
+                    android:background="@null"
+                    android:gravity="start|center_vertical"
+                    android:hint="(必填)"
+                    android:minHeight="45dp"
+                    android:singleLine="true"
+                    android:text="@={workerReq.workerAddress}"
+                    android:textColor="@color/color_main_text_light_black"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="8dp"
+                android:background="@android:color/white"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="手机号码"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:gravity="center_vertical|right"
+                    android:hint="(必填)"
+                    android:inputType="phone"
+                    android:maxLength="11"
+                    android:minWidth="150dp"
+                    android:singleLine="true"
+                    android:text="@={workerReq.workerMobile}"
+                    android:textColor="@color/color_main_text_light_black"
+                    android:textSize="@dimen/sp_14" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_workerType"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="1px"
+                android:background="@android:color/white"
+                android:onClick="@{click}"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="工种"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_workerTypeInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/iv_more"
+                    android:hint="(必填)"
+                    android:text="@{workerReq.workerTypeInfo}"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/iv_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@mipmap/ic_arrow_right" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="1px"
+                android:background="@android:color/white"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="日工资(元/工日)"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:gravity="center_vertical|right"
+                    android:hint="(必填)"
+                    android:inputType="numberDecimal"
+                    android:minWidth="150dp"
+                    android:singleLine="true"
+                    android:text="@={workerReq.salary}"
+                    android:textColor="@color/color_main_text_light_black"
+                    android:textSize="@dimen/sp_14" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="备注"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="12dp"
+                    android:background="@null"
+                    android:gravity="start|center_vertical"
+                    android:hint="请填写备注信息"
+                    android:minHeight="45dp"
+                    android:singleLine="true"
+                    android:text="@={workerReq.remark}"
+                    android:textColor="@color/color_main_text_light_black"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:paddingBottom="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="12dp"
+                    android:text="证件照片"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/iv_selImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginRight="80dp"
+                    android:onClick="@{click}"
+                    android:scaleType="center"
+                    android:src="@mipmap/ic_camera" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_del"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="12px"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:onClick="@{click}"
+                android:text="移除工人"
+                android:textColor="@color/red"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </ScrollView>
+</layout>

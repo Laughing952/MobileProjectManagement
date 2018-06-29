@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="java.lang.String"/>
+
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/tv_seek_bar_task_progress_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:gravity="center_vertical"
+                android:text="进度"
+                android:textColor="#000"
+                android:textSize="@dimen/sp_16"/>
+
+            <SeekBar
+                android:id="@+id/sb_seek_bar_task_progress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/tv_seek_bar_task_progress_num"
+                android:layout_toRightOf="@id/tv_seek_bar_task_progress_progress"/>
+
+            <TextView
+                android:id="@id/tv_seek_bar_task_progress_num"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:gravity="center_vertical"
+                android:text="0%"
+                android:textColor="#000"
+                android:textSize="@dimen/sp_16"/>
+
+        </RelativeLayout>
+    </FrameLayout>
+
+</layout>

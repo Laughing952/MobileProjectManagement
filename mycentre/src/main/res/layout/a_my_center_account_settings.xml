@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="content"
+            type="java.lang.String"/>
+
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  style="@style/style_width_height_match_parent"
+                  android:orientation="vertical">
+        <!--更换手机号-->
+        <RelativeLayout
+            android:id="@+id/rl_my_center_setting_change_phone_num"
+            style="@style/style_common_line_style"
+            android:layout_width="match_parent"
+            android:background="@color/color_main_bg_white"
+            android:onClick="@{click}">
+
+            <TextView
+                android:id="@+id/tv_my_center_setting_change_phone_num"
+                style="@style/style_width_height_wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:text="更换手机号"
+                android:textColor="@color/color_main_text_light_black"
+                android:textSize="@dimen/sp_16"/>
+
+            <ImageView
+                style="@style/style_width_height_wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ic_arrow_right"/>
+
+        </RelativeLayout>
+
+        <View
+            style="@style/style_flow_people_8_dp_height_split_line"></View>
+
+        <!--版本更新-->
+        <RelativeLayout
+            android:id="@+id/rl_my_center_setting_change_update_app"
+            style="@style/style_common_line_style"
+            android:layout_width="match_parent"
+            android:background="@color/color_main_bg_white"
+            android:onClick="@{click}">
+
+            <TextView
+                android:id="@+id/tv_my_center_setting_update_app"
+                style="@style/style_width_height_wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:text="版本更新"
+                android:textColor="@color/color_main_text_light_black"
+                android:textSize="@dimen/sp_16"/>
+
+            <ImageView
+                style="@style/style_width_height_wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ic_arrow_right"/>
+
+        </RelativeLayout>
+
+        <View
+            style="@style/style_flow_people_8_dp_height_split_line"></View>
+    </LinearLayout>
+</layout>

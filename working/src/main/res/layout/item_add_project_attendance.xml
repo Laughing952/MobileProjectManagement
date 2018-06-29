@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.unistrong.working.response.CreateNewTask_ProjectNameRep"/>
+
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@={viewModel.itemname}"
+            android:textColor="#666666"
+            android:textSize="@dimen/sp_14"/>
+
+    </RelativeLayout>
+</layout>

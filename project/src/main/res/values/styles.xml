@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="style_project_doing_tv">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:textColor">#000</item>
+    </style>
+
+    <!--搜索框：已复用-->
+    <style name="style_search_box">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:background">@drawable/search_shape</item>
+        <item name="android:drawableLeft">@mipmap/ic_search_blue</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/color_main_text_light_black</item>
+        <item name="android:textColorHint">@color/color_main_text_light_black</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+</resources>

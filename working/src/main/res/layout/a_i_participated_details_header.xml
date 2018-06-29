@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.unistrong.working.ui.viewmodel.GeneralApprovalIApprovedVM"/>
+
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <!--安排人-->
+        <RelativeLayout
+            android:id="@+id/rl_i_participated_details_header_arrange_person_name"
+            style="@style/style_common_line_style"
+            android:onClick="@{click}"
+            >
+
+            <TextView
+                style="@style/style_width_height_wrap_content_right_arrow"
+                android:text="安排人:"
+                />
+
+            <TextView
+                android:id="@+id/tv_i_participated_details_header_arrange_person_name"
+                style="@style/style_edit_text_user_info"
+                android:maxLength="20"
+                android:text="@={viewmodel.name}"
+                />
+
+        </RelativeLayout>
+
+        <View
+            style="@style/style_flow_people_1_dp_height_split_line"/>
+        <!--执行人-->
+        <RelativeLayout
+            android:id="@+id/rl_i_participated_details_header_approve_person"
+            style="@style/style_common_line_style"
+            android:onClick="@{click}">
+
+
+            <TextView
+                style="@style/style_width_height_wrap_content_right_arrow"
+                android:text="执行人:"
+                />
+
+            <TextView
+                android:id="@+id/tv_i_participated_details_header_approve_person"
+                style="@style/style_edit_text_user_info"
+                android:maxLength="20"
+                android:text="@={viewmodel.approval}"
+
+                />
+
+        </RelativeLayout>
+
+        <View
+            style="@style/style_flow_people_1_dp_height_split_line"/>
+
+        <!--项目名-->
+        <RelativeLayout
+            android:id="@+id/rl_i_participated_details_header_project_name"
+            style="@style/style_common_line_style"
+            android:onClick="@{click}"
+            >
+
+            <TextView
+                style="@style/style_width_height_wrap_content_right_arrow"
+                android:text="项目:"
+                />
+
+            <TextView
+                android:id="@+id/tv_i_participated_details_project_name"
+                style="@style/style_edit_text_user_info"
+                android:maxLength="20"
+                android:text="@={viewmodel.title}"
+                />
+
+        </RelativeLayout>
+
+        <View
+            style="@style/style_flow_people_1_dp_height_split_line"/>
+
+
+        <!--任务名称-->
+        <RelativeLayout
+            android:id="@+id/rl_i_participated_details_header_task_name"
+            style="@style/style_common_line_style"
+            android:onClick="@{click}"
+            >
+
+            <TextView
+                style="@style/style_width_height_wrap_content_right_arrow"
+                android:text="任务名称:"
+                />
+
+            <TextView
+                android:id="@+id/tv_i_participated_details_header_task_name"
+                style="@style/style_edit_text_user_info"
+                android:ellipsize="end"
+                android:text="@={viewmodel.content}"
+                />
+
+        </RelativeLayout>
+
+        <View
+            style="@style/style_flow_people_1_dp_height_split_line"/>
+
+        <!--截止日期-->
+        <RelativeLayout
+            android:id="@+id/rl_i_participated_details_header_end_date"
+            style="@style/style_common_line_style"
+            android:onClick="@{click}"
+            >
+
+            <TextView
+                style="@style/style_width_height_wrap_content_right_arrow"
+                android:text="截止日期:"
+                />
+
+            <TextView
+                android:id="@+id/tv_i_participated_details_header_end_date"
+                style="@style/style_edit_text_user_info"
+                android:maxLength="20"
+                android:text="@={viewmodel.cc}"
+
+                />
+
+        </RelativeLayout>
+
+        <View
+            style="@style/style_flow_people_1_dp_height_split_line"/>
+
+
+        <!--描述-->
+        <RelativeLayout
+            android:id="@+id/rl_i_participated_details_header_describe"
+            style="@style/style_common_line_style"
+            android:onClick="@{click}"
+            >
+
+            <TextView
+                style="@style/style_width_height_wrap_content_right_arrow"
+                android:text="描述:"
+                />
+
+            <TextView
+                android:id="@+id/tv_i_participated_details_header_describe"
+                style="@style/style_edit_text_user_info"
+                android:maxLength="20"
+                android:text="@={viewmodel.cc}"
+
+                />
+
+        </RelativeLayout>
+
+        <View
+            style="@style/style_flow_people_1_dp_height_split_line"/>
+
+        <!--参与人-->
+        <RelativeLayout
+            android:id="@+id/rl_i_participated_details_header_join_person"
+            style="@style/style_common_line_style"
+            android:onClick="@{click}"
+            >
+
+            <TextView
+                style="@style/style_width_height_wrap_content_right_arrow"
+                android:text="参与人:"
+                />
+
+            <TextView
+                android:id="@+id/tv_i_participated_details_header_join_person"
+                style="@style/style_edit_text_user_info"
+                android:maxLength="20"
+                android:text="@={viewmodel.cc}"
+
+                />
+
+        </RelativeLayout>
+
+        <View
+            style="@style/style_flow_people_8_dp_height_split_line"/>
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="任务动态"
+            android:textColor="@color/base_title_bg"
+            android:textSize="@dimen/sp_16"/>
+
+        <View
+            style="@style/style_flow_people_1_dp_height_split_line"/>
+    </LinearLayout>
+
+</layout>

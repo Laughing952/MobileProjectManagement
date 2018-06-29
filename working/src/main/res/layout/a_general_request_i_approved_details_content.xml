@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="content"
+            type="java.lang.String"/>
+
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  style="@style/style_width_height_match_parent"
+                  android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_general_request_i_approved_details_content_content"
+            style="@style/style_all_other"
+            android:layout_height="500dp"
+            android:cursorVisible="true"
+            android:hint=""/>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.project.ui.viewmodel.CreateProjectVM"/>
+
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:overScrollMode="never"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+
+                <EditText
+                    android:id="@+id/et_project_summary_program_simple_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:hint="请输入项目简称"
+                    android:minLines="1"
+                    android:singleLine="true"
+                    android:text="@={viewmodel.itemNote}"
+                    android:textSize="@dimen/sp_16"
+                    />
+            </LinearLayout>
+
+            <View
+                style="@style/style_flow_people_1_dp_height_split_line"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+
+                <EditText
+                    android:id="@+id/et_project_summary_program_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:hint="请输入项目全称"
+                    android:minLines="1"
+                    android:singleLine="true"
+                    android:text="@={viewmodel.itemName}"
+                    android:textSize="@dimen/sp_16"
+                    />
+            </LinearLayout>
+
+            <View
+                style="@style/style_flow_people_1_dp_height_split_line"/>
+
+            <!--项目负责人-->
+            <RelativeLayout
+                android:id="@+id/rl_project_summary_manager"
+                style="@style/style_common_line_style"
+                android:onClick="@{click}"
+                >
+
+                <TextView
+                    style="@style/style_width_height_wrap_content_right_arrow"
+                    android:text="项目负责人"
+                    />
+
+                <TextView
+                    android:id="@+id/edt_project_summary_edit_leader"
+                    style="@style/style_edit_text_user_info"
+                    android:layout_toLeftOf="@+id/iv_arrow2"
+                    android:hint="请选择项目负责人姓名"
+                    android:maxLength="13"
+                    android:text="@={viewmodel.itemHead}"
+                    />
+
+
+                <ImageView
+                    android:id="@id/iv_arrow2"
+                    style="@style/style_width_height_wrap_content_arrow"
+                    />
+
+            </RelativeLayout>
+
+            <View
+                style="@style/style_flow_people_1_dp_height_split_line"/>
+            <!--项目成员-->
+            <RelativeLayout
+                android:id="@+id/rl_project_summary_member"
+                style="@style/style_common_line_style"
+                android:onClick="@{click}"
+                >
+
+                <TextView
+                    style="@style/style_width_height_wrap_content_right_arrow"
+                    android:text="项目成员"
+                    />
+
+                <TextView
+                    android:id="@+id/edt_project_summary_person_num"
+                    style="@style/style_edit_text_user_info"
+                    android:layout_toLeftOf="@+id/iv_arrow_num"
+                    android:maxLength="13"
+                    android:text="@={viewmodel.personNum}"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_arrow_num"
+                    style="@style/style_width_height_wrap_content_arrow"
+                    />
+            </RelativeLayout>
+
+            <View
+                style="@style/style_flow_people_1_dp_height_split_line"/>
+            <!--建设单位-->
+            <RelativeLayout
+                android:id="@+id/rl_project_summary_construction_unit"
+                style="@style/style_common_line_style"
+                android:onClick="@{click}"
+                >
+
+                <TextView
+                    style="@style/style_width_height_wrap_content_right_arrow"
+                    android:text="建设单位"
+                    />
+
+                <EditText
+                    android:id="@+id/edt_project_summary_construction_unit"
+                    style="@style/style_edit_text_user_info"
+                    android:layout_toLeftOf="@+id/iv_arrow_construction"
+                    android:ellipsize="end"
+                    android:hint="请输入建设单位"
+                    android:text="@={viewmodel.buildCompany}"
+                    />
+
+
+                <ImageView
+                    android:id="@id/iv_arrow_construction"
+                    style="@style/style_width_height_wrap_content_arrow"
+                    />
+
+            </RelativeLayout>
+
+            <View
+                style="@style/style_flow_people_1_dp_height_split_line"/>
+            <!--设计单位-->
+            <RelativeLayout
+                android:id="@+id/rl_project_summary_design_unit"
+                style="@style/style_common_line_style"
+                android:onClick="@{click}"
+                >
+
+                <TextView
+                    style="@style/style_width_height_wrap_content_right_arrow"
+                    android:text="设计单位"
+
+                    />
+
+                <EditText
+                    android:id="@+id/edt_project_summary_design_unit"
+                    style="@style/style_edit_text_user_info"
+                    android:layout_toLeftOf="@+id/iv_arrow_design"
+                    android:ellipsize="end"
+                    android:hint="请输入设计单位"
+                    android:text="@={viewmodel.designCompany}"
+                    />
+
+
+                <ImageView
+                    android:id="@id/iv_arrow_design"
+                    style="@style/style_width_height_wrap_content_arrow"
+                    />
+
+            </RelativeLayout>
+
+            <View
+                style="@style/style_flow_people_1_dp_height_split_line"/>
+            <!--施工单位-->
+            <RelativeLayout
+                android:id="@+id/rl_project_summary_work_unit"
+                style="@style/style_common_line_style"
+                android:onClick="@{click}"
+                >
+
+                <TextView
+                    style="@style/style_width_height_wrap_content_right_arrow"
+                    android:text="施工单位"
+                    />
+
+                <EditText
+                    android:id="@+id/edt_project_summary_work_unit"
+                    style="@style/style_edit_text_user_info"
+                    android:layout_toLeftOf="@+id/iv_arrow_work"
+                    android:ellipsize="end"
+                    android:hint="请输入施工单位"
+                    android:text="@={viewmodel.constructionCompany}"
+                    />
+
+
+                <ImageView
+                    android:id="@id/iv_arrow_work"
+                    style="@style/style_width_height_wrap_content_arrow"
+                    />
+
+            </RelativeLayout>
+
+            <View
+                style="@style/style_flow_people_1_dp_height_split_line"/>
+            <!--监理单位-->
+            <RelativeLayout
+                android:id="@+id/rl_project_summary_supervision_unit"
+                style="@style/style_common_line_style"
+                android:onClick="@{click}"
+                >
+
+                <TextView
+                    style="@style/style_width_height_wrap_content_right_arrow"
+                    android:text="监理单位"/>
+
+                <EditText
+                    android:id="@+id/edt_project_summary_supervision_unit"
+                    style="@style/style_edit_text_user_info"
+                    android:layout_toLeftOf="@+id/iv_arrow_supervision"
+                    android:ellipsize="end"
+                    android:hint="请输入监理单位"
+                    android:text="@={viewmodel.supervisorCompany}"/>
+
+                <ImageView
+                    android:id="@id/iv_arrow_supervision"
+                    style="@style/style_width_height_wrap_content_arrow"/>
+
+            </RelativeLayout>
+
+            <View
+                style="@style/style_flow_people_1_dp_height_split_line"/>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                          style="@style/style_width_height_match_parent"
+                          android:background="@color/color_main_bg_white"
+                          android:orientation="vertical"
+                          android:padding="10dp">
+
+                <TextView
+                    style="@style/style_width_height_wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="照片(点击照片进行编辑)"
+                    android:textColor="@color/color_main_text_light_black"
+                    android:textSize="@dimen/sp_16"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/iv_project_summary_project_image"
+                        android:layout_width="200dp"
+                        android:layout_height="150dp"
+                        android:layout_margin="20dp"
+                        android:onClick="@{click}"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/ic_camera"/>
+
+                    <TextView
+                        android:id="@+id/tv"
+                        android:layout_width="200dp"
+                        android:layout_height="150dp"
+                        android:layout_margin="20dp"
+                        android:gravity="right"
+                        android:text="编辑"
+                        android:textColor="#666"
+                        android:textSize="@dimen/sp_16"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                style="@style/style_flow_people_1_ps_line_grey"></View>
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

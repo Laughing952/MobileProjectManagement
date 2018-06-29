@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener"/>
+
+    </data>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/srl_center_help_function_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+                    <View
+                        android:layout_width="5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/main_color"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:text="应用"
+                        android:textColor="@color/color_main_text_light_black"
+                        android:textSize="@dimen/sp_12"/>
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_center_help_function_description_apply"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="@color/line"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+                    <View
+                        android:layout_width="5dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/main_color"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:text="消息"
+                        android:textColor="@color/color_main_text_light_black"
+                        android:textSize="@dimen/sp_12"/>
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_center_help_function_description_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"/>
+            </LinearLayout>
+        </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</layout>

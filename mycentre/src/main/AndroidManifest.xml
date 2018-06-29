@@ -1,0 +1,40 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.mycentre">
+
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <application>
+        <activity android:name=".ui.activity.A_My_Center_Feedback"/>
+        <activity android:name=".ui.activity.A_My_Center_About_Us"/>
+        <activity android:name=".ui.activity.A_My_Center_Account_Settings"/>
+        <activity android:name=".ui.activity.A_My_Center_Personal_Info"/>
+        <activity android:name=".ui.activity.A_My_Center_Change_Phone_Number"/>
+
+        <activity android:name=".ui.activity.A_System_Settings"/>
+        <activity android:name=".ui.activity.A_Divisional_Management"/>
+        <activity android:name=".ui.activity.A_New_Department"/>
+        <activity android:name=".ui.activity.A_Personnel_Management"/>
+        <activity android:name=".ui.activity.A_New_Personnel"/>
+        <activity android:name=".ui.activity.A_Duty_Jurisdiction"/>
+        <activity android:name=".ui.activity.A_New_Duty"/>
+        <activity android:name=".ui.activity.A_My_Center_Help_Center"/>
+        <activity android:name=".ui.activity.A_Novice_Guide"/>
+        <activity android:name=".ui.activity.A_Center_Help_Common_Problem"/>
+        <activity android:name=".ui.activity.A_Center_Help_Function_Description"/>
+        <activity android:name=".ui.activity.A_Quality_Description"/>
+        <activity android:name=".ui.activity.A_Job_Description"/>
+        <activity android:name=".ui.activity.A_Material_Description"/>
+        <activity android:name=".ui.activity.A_Task_Description"/>
+        <activity android:name=".ui.activity.A_Request_Description"/>
+
+
+        <!--新手引导-->
+        <activity android:name=".ui.activity.A_How_To_Punch"/>
+        <activity android:name=".ui.activity.A_How_To_Create_Project"/>
+        <activity android:name=".ui.activity.A_How_To_Create_Task"/>
+        <!--常见问题-->
+        <activity android:name=".ui.activity.A_Punch_Location_Fail_How_To_Do"/>
+        <activity android:name=".ui.activity.A_How_To_Update_Program_Progress"/>
+        <activity android:name=".ui.activity.A_Upload_image_Fail"/>
+
+    </application>
+</manifest>

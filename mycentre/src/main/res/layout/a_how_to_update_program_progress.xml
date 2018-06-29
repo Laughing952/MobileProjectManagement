@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="java.lang.String"/>
+
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:overScrollMode="never"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:padding="10dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="        打卡app --> 进入工作台，点击工作任务 --> 点击“派给我的”，再点击任务条目进入详情。点击右上角“更多” --> 选择反馈进度 --> 用手指点击进度条进行拖动，即可。最后点击右上角“确定”按钮进行保存。"
+                android:textColor="#666"
+                android:textSize="@dimen/sp_16"/>
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="        注意：进度提交之后，下一次的工作进度不能够调整为比当前进度更小。"
+                android:textColor="#666"
+                android:textSize="@dimen/sp_16"/>
+        </LinearLayout>
+
+    </ScrollView>
+</layout>

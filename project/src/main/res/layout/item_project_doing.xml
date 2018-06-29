@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.project.response.ProjectDoingRep" />
+
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <!--正在执行的项目-->
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <ImageView
+            android:id="@+id/iv_project_doing_img"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:src="@mipmap/ic_program_normal" />
+
+        <LinearLayout
+            android:id="@+id/ll_project_doing_project"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/iv_project_doing_more"
+            android:layout_toRightOf="@id/iv_project_doing_img"
+            android:orientation="vertical">
+            <!--项目名-->
+            <TextView
+                android:id="@+id/tv_project_over_project_name"
+                style="@style/style_project_doing_tv"
+                android:ellipsize="end"
+                android:text="@{viewmodel.itemname}"
+                android:textSize="@dimen/sp_16" />
+            <!--负责人-->
+            <TextView
+                android:id="@+id/tv_project_over_project_principal"
+                style="@style/style_project_doing_tv"
+                android:text="@{viewmodel.itemhead}"
+                android:textColor="#666666"
+                android:textSize="@dimen/sp_14" />
+            <!--进度-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_project_over_project_progress"
+                    style="@style/style_project_doing_tv"
+                    android:layout_width="wrap_content"
+                    android:text="@{viewmodel.schedule}"
+                    android:textColor="#666666"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/tv_project_over_project_work_time"
+                    style="@style/style_project_doing_tv"
+                    android:layout_width="wrap_content"
+                    android:text="@{viewmodel.workDay}"
+                    android:textColor="#666666"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@id/iv_project_doing_more"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/topbar_icon_more_blue" />
+
+        <View
+            style="@style/style_flow_people_1_dp_height_split_line"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+</layout>

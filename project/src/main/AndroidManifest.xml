@@ -1,0 +1,38 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.project">
+
+    <application>
+        <activity android:name=".ui.activity.A_Create_Project" />
+        <activity android:name=".ui.activity.A_Search_Project" />
+        <activity android:name=".ui.activity.A_Project_Doing" />
+        <activity android:name=".ui.activity.A_Project_Over" />
+        <activity android:name=".ui.activity.A_Project_Member" />
+        <activity android:name=".ui.activity.A_Add_Member" />
+        <activity android:name=".ui.activity.A_Grouping" />
+        <activity android:name=".ui.activity.A_Edit_Member" />
+        <activity android:name=".ui.activity.A_Choose_Project" />
+
+        <activity android:name=".ui.activity.A_Project_Home" />
+        <activity android:name=".ui.activity.A_Record_Merit" />
+        <activity android:name=".ui.activity.A_Project_Member_Checked" />
+        <activity android:name=".ui.activity.A_Project_Summary" />
+        <activity android:name=".ui.activity.A_Quality" />
+        <activity android:name=".ui.activity.A_New_Quality" />
+        <activity android:name=".ui.activity.A_Editext" />
+        <activity android:name=".ui.activity.A_Quality_Details" />
+        <activity android:name=".ui.activity.A_Material_Management" />
+        <activity android:name=".ui.activity.A_Outbound" />
+        <activity android:name=".ui.activity.A_Outbound_Records" />
+        <activity android:name=".ui.activity.A_Storage_Records" />
+        <activity android:name=".ui.activity.A_Classification_Management" />
+        <activity android:name=".ui.activity.A_In_Stock" />
+        <activity android:name=".ui.activity.A_Add_Merit" />
+        <activity android:name=".ui.activity.A_Workers_List" />
+        <activity android:name=".ui.activity.A_New_Worker" />
+        <activity android:name=".ui.activity.A_Sel_WorkerType" />
+        <activity android:name=".ui.activity.A_Material_Record" />
+        <activity android:name=".ui.activity.A_Out_Stock_Verify" />
+
+
+    </application>
+</manifest>

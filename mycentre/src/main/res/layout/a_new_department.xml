@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.mycentre.ui.viewmodel.DivisionalManagementVM" />
+
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/line"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/tl_superior_department"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/white"
+            android:onClick="@{click}"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <TextView
+                android:id="@+id/tv_superior_department"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="上级部门："
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_superior_department"
+                android:text="@{viewModel.content}"
+                android:textColor="@color/color_main_text_light_black"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ic_arrow_right" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/white"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="部门名称："
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/et_departmentName"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="(必填)"
+                android:singleLine="true"
+                android:textColor="@color/color_main_text_light_black"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

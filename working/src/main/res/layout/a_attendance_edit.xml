@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="java.lang.String"/>
+
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:id="@+id/rl_attendance_edit_name"
+            style="@style/style_common_line_style"
+            android:layout_width="match_parent"
+            android:background="@color/color_main_bg_white"
+            android:onClick="@{click}">
+
+            <TextView
+                android:id="@+id/tv_attendance_edit_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="考勤点名称"
+                android:textColor="#000"
+                android:textSize="@dimen/sp_16"/>
+
+            <TextView
+                android:id="@+id/tv_attendance_edit_attendance_name"
+                style="@style/style_edit_text_user_info"
+                android:layout_toLeftOf="@+id/iv_attendance_edit_arrow31"
+                android:ellipsize="end"
+                android:paddingRight="10dp"
+                android:text=""
+                />
+
+            <ImageView
+                android:id="@id/iv_attendance_edit_arrow31"
+                style="@style/style_width_height_wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ic_arrow_right"
+                android:visibility="gone"/>
+        </RelativeLayout>
+        style="@style/style_flow_people_1_dp_height_split_line"/>
+
+        <ScrollView
+            android:id="@+id/sv_attendance_edit_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/rl_attendance_edit_name"
+            android:orientation="vertical"
+            android:overScrollMode="never"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:layout_marginRight="@dimen/dp_12"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="12dp"
+                    android:gravity="center_vertical"
+                    android:text="考勤时间"
+                    android:textColor="#999"
+                    android:textSize="@dimen/sp_12"/>
+                <!--星期1-->
+                <LinearLayout
+                    style="@style/style_working_punch_ll">
+
+                    <CheckBox
+                        android:id="@+id/cb_punch_setting1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:checked="true"
+                        android:onClick="@{click}"/>
+
+                    <TextView
+                        style="@style/style_working_punch_week"
+                        android:text="星期一"/>
+
+                    <TextView
+                        android:id="@+id/tv_attendance_edit_time1"
+                        style="@style/style_working_punch_time2"
+                        android:text="09:00"/>
+
+                    <TextView
+                        style="@style/style_working_punch_time2"
+                        android:layout_width="wrap_content"
+                        android:text="-"/>
+
+                    <TextView
+                        android:id="@+id/tv_attendance_edit_time12"
+                        style="@style/style_working_punch_time2"
+                        android:text="18:00"/>
+
+                    <ImageView
+                        android:id="@+id/iv_attendance_edit1"
+                        style="@style/style_add_custom_attendance_iv"
+                        android:onClick="@{click}"
+                        android:src="@mipmap/topbar_icon_more_blue"/>
+                </LinearLayout>
+
+                <View
+                    style="@style/style_flow_people_1_dp_height_split_line"/>
+                <!--星期2-->
+                <LinearLayout
+                    style="@style/style_working_punch_ll">
+
+                    <CheckBox
+                        android:id="@+id/cb_punch_setting2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:checked="true"
+                        android:onClick="@{click}"/>
+
+                    <TextView
+                        style="@style/style_working_punch_week"
+                        android:text="星期二"/>
+
+                    <TextView
+                        android:id="@+id/tv_attendance_edit_time2"
+                        style="@style/style_working_punch_time2"
+                        android:text="09:00"/>
+
+                    <TextView
+                        style="@style/style_working_punch_time2"
+                        android:layout_width="wrap_content"
+                        android:text="-"/>
+
+                    <TextView
+                        android:id="@+id/tv_attendance_edit_time22"
+                        style="@style/style_working_punch_time2"
+                        android:text="18:00"/>
+
+                    <ImageView
+                        android:id="@+id/iv_attendance_edit2"
+                        style="@style/style_add_custom_attendance_iv"
+                        android:onClick="@{click}"
+                        android:src="@mipmap/topbar_icon_more_blue"/>
+                </LinearLayout>
+
+                <View
+                    style="@style/style_flow_people_1_dp_height_split_line"/>
+                <!--星期3-->
+                <LinearLayout
+                    style="@style/style_working_punch_ll">
+
+                    <CheckBox
+                        android:id="@+id/cb_punch_setting3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:checked="true"
+                        android:onClick="@{click}"/>
+
+                    <TextView
+                        style="@style/style_working_punch_week"
+                        android:text="星期三"/>
+
+                    <TextView
+                        android:id="@+id/tv_attendance_edit_time3"
+                        style="@style/style_working_punch_time2"
+                        android:text="09:00"/>
+
+                    <TextView
+                        style="@style/style_working_punch_time2"
+                        android:layout_width="wrap_content"
+                        android:text="-"/>
+
+                    <TextView
+                        android:id="@+id/tv_attendance_edit_time32"
+                        style="@style/style_working_punch_time2"
+                        android:text="18:00"/>
+
+                    <ImageView
+                        android:id="@+id/iv_attendance_edit3"
+                        style="@style/style_add_custom_attendance_iv"
+                        android:onClick="@{click}"
+                        android:src="@mipmap/topbar_icon_more_blue"/>
+                </LinearLayout>
+
+                <View
+                    style="@style/style_flow_people_1_dp_height_split_line"/>
+                <!--星期4-->
+                <LinearLayout
+                    style="@style/style_working_punch_ll">
+
+                    <CheckBox
+                        android:id="@+id/cb_punch_setting4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:checked="true"
+                        android:onClick="@{click}"/>
+
+                    <TextView
+                        style="@style/style_working_punch_week"
+                        android:text="星期四"/>
+
+                    <TextView
+                        android:id="@+id/tv_attendance_edit_time4"
+                        style="@style/style_working_punch_time2"
+                        android:text="09:00"/>
+
+                    <TextView
+                        style="@style/style_working_punch_time2"
+                        android:layout_width="wrap_content"
+                        android:text="-"/>
+
+                    <TextView
+                        android:id="@+id/tv_attendance_edit_time42"
+                        style="@style/style_working_punch_time2"
+                        android:text="18:00"/>
+
+                    <ImageView
+                        android:id="@+id/iv_attendance_edit4"
+                        style="@style/style_add_custom_attendance_iv"
+                        android:onClick="@{click}"
+                        android:src="@mipmap/topbar_icon_more_blue"/>
+                </LinearLayout>
+
+                <View
+                    style="@style/style_flow_people_1_dp_height_split_line"/>
+                <!--星期5-->
+                <LinearLayout
+                    style="@style/style_working_punch_ll">
+
+                    <CheckBox
+                        android:id="@+id/cb_punch_setting5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:checked="true"
+                        android:onClick="@{click}"/>
+
+                    <TextView
+                        style="@style/style_working_punch_week"
+                        android:text="星期五"/>
+
+                    <TextView
+                        android:id="@+id/tv_attendance_edit_time5"
+                        style="@style/style_working_punch_time2"
+                        android:text="09:00"/>
+
+                    <TextView
+                        style="@style/style_working_punch_time2"
+                        android:layout_width="wrap_content"
+                        android:text="-"/>
+
+                    <TextView
+                        android:id="@+id/tv_attendance_edit_time52"
+                        style="@style/style_working_punch_time2"
+                        android:text="18:00"/>
+
+                    <ImageView
+                        android:id="@+id/iv_attendance_edit5"
+                        style="@style/style_add_custom_attendance_iv"
+                        android:onClick="@{click}"
+                        android:src="@mipmap/topbar_icon_more_blue"/>
+                </LinearLayout>
+
+                <View
+                    style="@style/style_flow_people_1_dp_height_split_line"/>
+                <!--星期6-->
+                <LinearLayout
+                    style="@style/style_working_punch_ll">
+
+                    <CheckBox
+                        android:id="@+id/cb_punch_setting6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:onClick="@{click}"/>
+
+                    <TextView
+                        style="@style/style_working_punch_week"
+                        android:text="星期六"/>
+
+
+                    <TextView
+                        android:id="@+id/tv_attendance_edit_time6"
+                        style="@style/style_working_punch_time2"
+                        android:text=""/>
+
+                    <TextView
+                        style="@style/style_working_punch_time2"
+                        android:layout_width="wrap_content"
+                        android:text="-"/>
+
+                    <TextView
+                        android:id="@+id/tv_attendance_edit_time62"
+                        style="@style/style_working_punch_time2"
+                        android:text=""/>
+
+                    <ImageView
+                        android:id="@+id/iv_attendance_edit6"
+                        style="@style/style_add_custom_attendance_iv"
+                        android:onClick="@{click}"
+                        android:src="@mipmap/topbar_icon_more_blue"/>
+                </LinearLayout>
+
+                <View
+                    style="@style/style_flow_people_1_dp_height_split_line"/>
+                <!--星期天-->
+                <LinearLayout
+                    style="@style/style_working_punch_ll">
+
+                    <CheckBox
+                        android:id="@+id/cb_punch_setting7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:onClick="@{click}"/>
+
+                    <TextView
+                        style="@style/style_working_punch_week"
+                        android:text="星期日"/>
+
+                    <TextView
+                        android:id="@+id/tv_attendance_edit_time7"
+                        style="@style/style_working_punch_time2"
+                        android:onClick="@{click}"
+                        android:text=""/>
+
+                    <TextView
+                        style="@style/style_working_punch_time2"
+                        android:layout_width="wrap_content"
+                        android:onClick="@{click}"
+                        android:text="-"/>
+
+                    <TextView
+                        android:id="@+id/tv_attendance_edit_time72"
+                        style="@style/style_working_punch_time2"
+                        android:onClick="@{click}"
+                        android:text=""/>
+
+                    <ImageView
+                        android:id="@+id/iv_attendance_edit7"
+                        style="@style/style_add_custom_attendance_iv"
+                        android:onClick="@{click}"
+                        android:src="@mipmap/topbar_icon_more_blue"/>
+                </LinearLayout>
+
+                <View
+                    style="@style/style_flow_people_8_dp_height_split_line"/>
+
+                <!--考勤地点-->
+                <RelativeLayout
+                    android:id="@+id/rl_attendance_edit_address"
+                    style="@style/style_common_line_style"
+                    android:layout_width="match_parent"
+                    android:background="@color/color_main_bg_white"
+                    android:onClick="@{click}">
+
+                    <TextView
+                        style="@style/style_width_height_wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="2dp"
+                        android:text="考勤地点"
+                        android:textColor="#000"
+                        android:textSize="@dimen/sp_14"/>
+
+                    <TextView
+                        android:id="@+id/tv_attendance_edit_address"
+                        style="@style/style_edit_text_user_info"
+                        android:layout_toLeftOf="@+id/iv_attendance_edit_arrow3"
+                        android:ellipsize="end"
+                        android:paddingRight="10dp"
+                        android:text=""
+                        />
+
+                    <ImageView
+                        android:id="@id/iv_attendance_edit_arrow3"
+                        style="@style/style_width_height_wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/ic_arrow_right"/>
+
+                </RelativeLayout>
+
+                <View
+                    style="@style/style_flow_people_1_dp_height_split_line"/>
+                <!--有效考勤范围-->
+                <RelativeLayout
+                    android:id="@+id/rl_attendance_edit_range"
+                    style="@style/style_common_line_style"
+                    android:layout_width="match_parent"
+                    android:background="@color/color_main_bg_white"
+                    android:onClick="@{click}">
+
+                    <TextView
+                        style="@style/style_width_height_wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="2dp"
+                        android:text="有效考勤范围"
+                        android:textColor="#000"
+                        android:textSize="@dimen/sp_14"/>
+
+                    <TextView
+                        android:id="@+id/tv_attendance_edit_range"
+                        style="@style/style_edit_text_user_info"
+                        android:layout_toLeftOf="@+id/rl_attendance_edit_arrow3"
+                        android:paddingRight="3dp"
+                        android:text="500米"
+                        />
+
+                    <ImageView
+                        android:id="@id/rl_attendance_edit_arrow3"
+                        style="@style/style_width_height_wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/ic_arrow_down"/>
+
+                </RelativeLayout>
+
+                <View
+                    style="@style/style_flow_people_1_dp_height_split_line"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/iv_attendance_edit_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:onClick="@{click}"
+            android:padding="10dp"
+            android:text="删除"
+            android:textColor="@drawable/selector_text_click"
+            android:textSize="@dimen/sp_16"/>
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.unistrong.working.ui.viewmodel.SentToMeVM"/>
+
+        <variable
+            name="click"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    style="@style/style_item_my_approval_rl_outer">
+
+        <LinearLayout
+            style="@style/style_item_my_approval_ll_2"
+            android:layout_toRightOf="@id/iv_my_approval_head_img">
+            <!--任务名称-->
+            <TextView
+                android:id="@+id/tv_my_approval_applicant"
+                style="@style/style_item_my_approval_ll_2_tv_16sp"
+                android:text="@{viewmodel.task_name}"/>
+            <!--截止日期-->
+            <TextView
+                android:id="@+id/tv_my_approval_title"
+                style="@style/style_item_my_approval_ll_3_tv_14sp"
+                android:text="@{viewmodel.end_date}"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/style_item_my_approval_ll_3">
+            <!--项目名-->
+            <TextView
+                android:id="@+id/tv_my_approval_date"
+                style="@style/style_item_my_approval_ll_3_tv_14sp"
+                android:text="@{viewmodel.p_name}"/>
+            <!--进度-->
+            <TextView
+                android:id="@+id/tv_my_approval_flag"
+                style="@style/style_item_my_approval_ll_3_tv_14sp"
+                android:text="@{viewmodel.schedule}"/>
+
+        </LinearLayout>
+
+        <View
+            style="@style/style_flow_people_1_dp_height_split_line"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+</layout>
